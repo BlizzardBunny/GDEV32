@@ -805,11 +805,6 @@ int main()
 		modelMatrix = glm::scale(modelMatrix, scaleVector);
 		// At this point, we now have: Identity * Translation * Rotate * Scale
 
-		//Normal Matrix
-		GLint normalMatrixUniform = glGetUniformLocation(program, "normalMatrix");
-		glm::vec3 normalVector(0.0f, 0.0f, 0.0f);
-		glm::mat4 normalMatrix();
-
 		// Set the value of our transformationMatrix uniform variable in the vertex shader to our matrix here
 		// The first parameter is the uniform location of the uniform we want to set the value of.
 		// The second parameter is the number of matrices to set the uniform with (we only have 1 matrix, so we give it a value of 1)
