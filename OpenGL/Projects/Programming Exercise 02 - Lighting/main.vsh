@@ -4,11 +4,17 @@
 layout(location = 0) in vec3 vertexPosition;
 layout(location = 1) in vec3 vertexColor;
 layout(location = 2) in vec2 vertexUV;
+layout(location = 3) in vec3 vertexNormal;
 
 // Output color
 out vec3 outColor;
 // Output UV-coordinates
 out vec2 outUV;
+// Output new normal vertex
+out vec3 outvertexNormal;
+
+// Normal Matrix for the normal vector
+uniform mat4 normalMatrix;
 
 uniform mat4 projectionMatrix;
 uniform mat4 viewMatrix;
@@ -33,4 +39,10 @@ void main()
 
 	// We pass the UV-coordinates of the current vertex to our output variable
 	outUV = vertexUV;
+
+	//Calculation of normal matrix
+	normalMatrix = transpose(inverse(modelMatrix));
+
+	// New value for normal vertex that will be passed to fragment shader
+	outvertexNormal = normalMatrix * vertexNormal;
 }

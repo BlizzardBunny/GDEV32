@@ -6,6 +6,9 @@ in vec3 outColor;
 // Take the 'outUV' output from the vertex shader as input of our fragment shader
 in vec2 outUV;
 
+// Taking 'outvertexNormal' from vertex shader as input to fragment shader
+in vec3 outvertexNormal;
+
 // Final color of the fragment, which we are required to output
 out vec4 fragColor;
 
@@ -25,4 +28,7 @@ void main()
 
 	// Pass the sampled color from the texture to our fragColor output variable
 	fragColor = sampledColor; 
+
+	//Set value of vertex normal to fragNormal and normalize
+	vec3 fragNormal = normalize(outvertexNormal);
 }
