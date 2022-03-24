@@ -70,8 +70,11 @@ struct Vertex
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void processInput(GLFWwindow *window);
 
-//glm::vec3 eye = { 2.0f, 1.0f, 4.0f };
+
 glm::vec3 cameraPosition = { 0.0f, 0.0f, 0.0f };
+glm::vec3 lightColor = { 0.0f, 0.0f, 0.0f };
+glm::vec3 lightPos = { 0.0f, 0.0f, 0.0f };
+
 glm::vec3 target = { 0.0f, 0.0f, -1.0f }; // Target is a specific point that the camera is looking at
 glm::vec3 up = { 0.0f, 0.1f, 0.0f }; // Global up vector (which will be used by the lookAt function to calculate the camera's right and up vectors)
 
@@ -856,6 +859,18 @@ int main()
 		viewMatrix = viewMatrix * lookAtMatrix;
 		GLint viewMatrixUniform = glGetUniformLocation(program, "viewMatrix");
 		glUniformMatrix4fv(viewMatrixUniform, 1, GL_FALSE, glm::value_ptr(viewMatrix));
+
+		//uniform for camera/eye position
+		GLint cameraPositionUniform = glGetUniformLocation(program, "cameraPosition");
+		glUniform3fv(cameraPositionUniform, 1, glm::value_ptr(cameraPosition));
+
+		//uniform for light color
+		GLint lightColorUniform = glGetUniformLocation(program, "lightColor");
+		glUniform3fv(lightColorUniform, 1, glm::value_ptr(lightColor));
+
+		//uniform for light position
+		GLint lightPosUniform = glGetUniformLocation(program, "lightPos");
+		glUniform3fv(lightPosUniform, 1, glm::value_ptr(lightPos));
 
 		// Construct our view frustrum (projection matrix) using the following parameters
 		float fieldOfViewY = glm::radians(45.0f); // Field of view

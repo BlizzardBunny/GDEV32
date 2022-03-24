@@ -17,7 +17,7 @@ out vec3 fragPosition;
 
 
 // Normal Matrix for the normal vector
-uniform mat4 normalMatrix;
+mat4 normalMatrix;
 
 uniform mat4 projectionMatrix;
 uniform mat4 viewMatrix;
@@ -47,8 +47,9 @@ void main()
 	normalMatrix = transpose(inverse(modelMatrix));
 
 	// New value for normal vertex that will be passed to fragment shader
-	fragvertexNormal = normalMatrix * vec4(vertexNormal, 1.0);
+	fragvertexNormal = vec3(normalMatrix * vec4(vertexNormal, 0.0f));
 
 	fragPosition = vec3(modelMatrix * vec4(vertexPosition, 1.f));
 	fragvertexNormal = mat3(transpose(inverse((modelMatrix))) * vertexNormal;
+	
 }
