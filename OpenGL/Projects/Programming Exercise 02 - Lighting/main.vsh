@@ -14,7 +14,7 @@ out vec2 outUV;
 out vec3 outvertexNormal;
 
 // Normal Matrix for the normal vector
-uniform mat4 normalMatrix;
+mat4 normalMatrix;
 
 uniform mat4 projectionMatrix;
 uniform mat4 viewMatrix;
@@ -44,5 +44,5 @@ void main()
 	normalMatrix = transpose(inverse(modelMatrix));
 
 	// New value for normal vertex that will be passed to fragment shader
-	outvertexNormal = normalMatrix * vertexNormal;
+	outvertexNormal = vec3(normalMatrix * vec4(vertexNormal, 0.0f));
 }

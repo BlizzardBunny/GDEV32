@@ -1,9 +1,8 @@
 ﻿  Main.cpp
-D:\MS Word files\School\ADMU\4th year\2nd Sem\GDEV\OpenGL\Projects\Programming Exercise 01 - OpenGL Review\Main.cpp(90,14): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\MS Word files\School\ADMU\4th year\2nd Sem\GDEV\OpenGL\Projects\Programming Exercise 01 - OpenGL Review\Main.cpp(698,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\MS Word files\School\ADMU\4th year\2nd Sem\GDEV\OpenGL\Projects\Programming Exercise 02 - Lighting\Main.cpp(91,14): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\MS Word files\School\ADMU\4th year\2nd Sem\GDEV\OpenGL\Projects\Programming Exercise 02 - Lighting\Main.cpp(787,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   Generating code
-  0 of 406 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 406 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
-  Programming Exercise 01 - OpenGL Review.vcxproj -> D:\MS Word files\School\ADMU\4th year\2nd Sem\GDEV\OpenGL\Projects\Programming Exercise 01 - OpenGL Review\x64\Release\Programming Exercise 01 - OpenGL Review.exe
+  Programming Exercise 01 - OpenGL Review.vcxproj -> D:\MS Word files\School\ADMU\4th year\2nd Sem\GDEV\OpenGL\Projects\Programming Exercise 02 - Lighting\x64\Release\Programming Exercise 01 - OpenGL Review.exe
