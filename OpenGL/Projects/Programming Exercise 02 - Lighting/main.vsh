@@ -50,6 +50,5 @@ void main()
 	fragvertexNormal = vec3(normalMatrix * vec4(vertexNormal, 0.0f));
 
 	fragPosition = vec3(modelMatrix * vec4(vertexPosition, 1.f));
-	fragvertexNormal = mat3(transpose(inverse((modelMatrix))) * vertexNormal;
-	
+	fragvertexNormal = vec3(mat4(transpose(inverse(modelMatrix))) * vec4(vertexNormal, 0.0f));
 }

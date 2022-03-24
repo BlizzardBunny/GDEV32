@@ -49,7 +49,7 @@ void main()
 	vec3 ambient = ambientStrength * lightColor;
 
 	//diffuse lighting
-	vec3 lightDir = normalize(lightPos – fragPos);
+	vec3 lightDir = normalize(lightPos - fragPosition);
 	float diff = max(dot(fragNormal, lightDir), 0.f);
 	vec3 diffuse = diff * lightColor;
 
@@ -60,7 +60,7 @@ void main()
 	vec3 specular = spec * lightColor;
 
 	// add all lighting stuff
-	vec3 finalColor = (ambient + diffuse + specular) * fragColor;
+	vec3 finalColor = (ambient + diffuse + specular) * vec3(fragColor);
 	fragColor = vec4(finalColor, 1.f);
 
 }
