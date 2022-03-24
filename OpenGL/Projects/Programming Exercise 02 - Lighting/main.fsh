@@ -30,5 +30,29 @@ void main()
 	fragColor = sampledColor; 
 
 	//Set value of vertex normal to fragNormal and normalize
+<<<<<<< Updated upstream
 	vec3 fragNormal = normalize(outvertexNormal);
+=======
+	vec3 fragNormal = normalize(fragvertexNormal);	
+	vec3 lightDir = normalize(lightPos - fragPosition);
+
+	//ambient
+	float ambientStrength = 0.1f;
+	vec3 ambient = ambientStrength * lightColor;
+
+	//diffuse lighting
+	float diff = max(dot(fragNormal, lightDir), 0.0f);
+	vec3 diffuse = diff * lightColor;
+
+	//specular lighting
+	vec3 viewDir = normalize(cameraPosition - fragPosition);
+	vec3 reflectDir = reflect(-lightDir, fragNormal);
+	float spec = pow(max(dot(viewDir, reflectDir), 0.0f), shine);
+	vec3 specular = spec * lightColor;
+
+	// add all lighting stuff
+	vec3 finalColor = (ambient + diffuse + specular) * outColor;
+	fragColor = vec4(finalColor, 1.0f);
+
+>>>>>>> Stashed changes
 }
