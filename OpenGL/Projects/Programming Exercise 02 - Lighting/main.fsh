@@ -27,6 +27,9 @@ uniform vec3 cameraPosition;
 // light position vector
 uniform vec3 lightPos;
 
+// shininess of material
+uniform float shine;
+
 // If we want to simultaneously use another texture at a different texture unit,
 // we can create another uniform for it.
 // Example:
@@ -56,7 +59,7 @@ void main()
 	//specular lighting
 	vec3 viewDir = normalize(cameraPosition - fragPosition);
 	vec3 reflectDir = reflect(-lightDir, fragNormal);
-	float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32);
+	float spec = pow(max(dot(viewDir, reflectDir), 0.0), shine);
 	vec3 specular = spec * lightColor;
 
 	// add all lighting stuff

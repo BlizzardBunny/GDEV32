@@ -70,11 +70,11 @@ struct Vertex
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void processInput(GLFWwindow *window);
 
-
 glm::vec3 cameraPosition = { 0.0f, 0.0f, 0.0f };//for wasd
 
 glm::vec3 lightColor = { 125.0f, 125.0f, 125.0f };
 glm::vec3 lightPos = { 0.0f, 0.0f, 0.0f };
+float shine = 32.0f;
 
 glm::vec3 target = { 0.0f, 0.0f, -1.0f }; // Target is a specific point that the camera is looking at
 glm::vec3 up = { 0.0f, 0.1f, 0.0f }; // Global up vector (which will be used by the lookAt function to calculate the camera's right and up vectors)
@@ -872,6 +872,10 @@ int main()
 		//uniform for light position
 		GLint lightPosUniform = glGetUniformLocation(program, "lightPos");
 		glUniform3fv(lightPosUniform, 1, glm::value_ptr(lightPos));
+
+		//uniform shininess
+		GLint shineUniform = glGetUniformLocation(program, "shine");
+		glUniform1f(shineUniform, shine);
 
 		// Construct our view frustrum (projection matrix) using the following parameters
 		float fieldOfViewY = glm::radians(45.0f); // Field of view
