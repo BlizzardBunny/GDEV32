@@ -47,8 +47,8 @@ void main()
 	normalMatrix = transpose(inverse(modelMatrix));
 
 	// New value for normal vertex that will be passed to fragment shader
-	fragvertexNormal = vec3(normalMatrix * vec4(vertexNormal, 0.0f));
+	//fragvertexNormal = vec3(normalMatrix * vec4(vertexNormal, 0.0f));
 
 	fragPosition = vec3(modelMatrix * vec4(vertexPosition, 1.f));
-	fragvertexNormal = vec3(mat4(transpose(inverse(modelMatrix))) * vec4(vertexNormal, 0.0f));
+	fragvertexNormal = vec3(mat4(normalMatrix) * vec4(vertexNormal, 0.0f));
 }

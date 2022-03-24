@@ -63,7 +63,6 @@ void main()
 	vec3 specular = spec * lightColor;
 
 	// add all lighting stuff
-	vec3 finalColor = (ambient + diffuse + specular) * vec3(fragColor);
+	vec3 finalColor = (ambient + diffuse + specular) * vec3(outColor);
 	fragColor = vec4(finalColor, 1.f);
-
 }

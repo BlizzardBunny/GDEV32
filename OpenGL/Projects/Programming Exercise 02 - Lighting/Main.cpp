@@ -72,7 +72,7 @@ void processInput(GLFWwindow *window);
 
 glm::vec3 cameraPosition = { 0.0f, 0.0f, 0.0f };//for wasd
 
-glm::vec3 lightColor = { 125.0f, 125.0f, 125.0f };
+glm::vec3 lightColor = { 1.0f, 1.0f, 1.0f };
 glm::vec3 lightPos = { 0.0f, 0.0f, 0.0f };
 float shine = 32.0f;
 
