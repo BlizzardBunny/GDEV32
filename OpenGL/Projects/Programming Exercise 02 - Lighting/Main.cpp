@@ -72,9 +72,15 @@ void processInput(GLFWwindow *window);
 
 glm::vec3 cameraPosition = { 0.0f, 0.0f, 0.0f };//for wasd
 
-glm::vec3 lightColor = { 1.0f, 1.0f, 1.0f };
 glm::vec3 lightPos = { 0.0f, 0.0f, 0.0f };
 float shine = 32.0f;
+
+float ambientComponent = 0.1f;
+glm::vec3 ambientIntensity = { 1.0f, 1.0f, 1.0f };
+float diffuseComponent = 1.0f;
+glm::vec3 diffuseIntensity = { 1.0f, 1.0f, 1.0f };
+float specularComponent = 1.0f;
+glm::vec3 specularIntensity = { 1.0f, 1.0f, 1.0f };
 
 glm::vec3 target = { 0.0f, 0.0f, -1.0f }; // Target is a specific point that the camera is looking at
 glm::vec3 up = { 0.0f, 0.1f, 0.0f }; // Global up vector (which will be used by the lookAt function to calculate the camera's right and up vectors)
@@ -865,9 +871,24 @@ int main()
 		GLint cameraPositionUniform = glGetUniformLocation(program, "cameraPosition");
 		glUniform3fv(cameraPositionUniform, 1, glm::value_ptr(cameraPosition));
 
-		//uniform for light color
-		GLint lightColorUniform = glGetUniformLocation(program, "lightColor");
-		glUniform3fv(lightColorUniform, 1, glm::value_ptr(lightColor));
+		//Phong Lighting Model uniforms
+		GLint ambientComponentUniform = glGetUniformLocation(program, "ambientComponent");
+		glUniform1f(ambientComponentUniform, ambientComponent);
+
+		GLint ambientIntensityUniform = glGetUniformLocation(program, "ambientIntensity");
+		glUniform3fv(ambientIntensityUniform, 1, glm::value_ptr(ambientIntensity));
+
+		GLint diffuseComponentUniform = glGetUniformLocation(program, "diffuseComponent");
+		glUniform1f(diffuseComponentUniform, diffuseComponent);
+
+		GLint diffuseIntensityUniform = glGetUniformLocation(program, "diffuseIntensity");
+		glUniform3fv(diffuseIntensityUniform, 1, glm::value_ptr(diffuseIntensity));
+
+		GLint specularComponentUniform = glGetUniformLocation(program, "specularComponent");
+		glUniform1f(specularComponentUniform, specularComponent);
+
+		GLint specularIntensityUniform = glGetUniformLocation(program, "specularIntensity");
+		glUniform3fv(specularIntensityUniform, 1, glm::value_ptr(specularIntensity));
 
 		//uniform for light position
 		GLint lightPosUniform = glGetUniformLocation(program, "lightPos");

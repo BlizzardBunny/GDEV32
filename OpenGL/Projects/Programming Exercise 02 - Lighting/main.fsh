@@ -18,14 +18,14 @@ out vec4 fragColor;
 // Uniform variable that will hold the texture unit of the texture that we want to use
 uniform sampler2D tex;
 
-// light color
-uniform vec3 lightColor;
-
 //from main.cpp
 uniform vec3 cameraPosition;
 
 // light position vector
 uniform vec3 lightPos;
+
+uniform float ambientComponent, diffuseComponent, specularComponent;
+uniform vec3 ambientIntensity, diffuseIntensity, specularIntensity;
 
 // shininess of material
 uniform float shine;
@@ -50,17 +50,17 @@ void main()
 
 	//ambient
 	float ambientStrength = 0.1f;
-	vec3 ambient = ambientStrength * lightColor;
+	vec3 ambient = ambientComponent * ambientIntensity;
 
 	//diffuse lighting
 	float diff = max(dot(fragNormal, lightDir), 0.0f);
-	vec3 diffuse = diff * lightColor;
+	vec3 diffuse = diff * diffuseComponent * diffuseIntensity;
 
 	//specular lighting
 	vec3 viewDir = normalize(cameraPosition - fragPosition);
 	vec3 reflectDir = reflect(-lightDir, fragNormal);
 	float spec = pow(max(dot(viewDir, reflectDir), 0.0f), shine);
-	vec3 specular = spec * lightColor;
+	vec3 specular = spec * specularComponent * specularIntensity;
 
 	// add all lighting stuff
 	vec3 finalColor = (ambient + diffuse + specular) * textureColor;
