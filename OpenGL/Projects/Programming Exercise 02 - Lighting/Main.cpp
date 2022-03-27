@@ -72,7 +72,7 @@ void processInput(GLFWwindow *window);
 
 glm::vec3 cameraPosition = { 0.0f, 0.0f, 0.0f };//for wasd
 
-glm::vec3 lightPos = { 0.0f, 0.0f, 0.0f };
+glm::vec3 lightPos = { 0.0f, 1.0f, 0.0f };
 float shine = 32.0f;
 
 float ambientComponent = 0.1f;
@@ -158,192 +158,192 @@ int main()
 
 	//frontmost face to view space
 		//bottom left (in relation to own normal vector)
-	vertices[0].x = 1.0f;	vertices[0].y = -1.0f;	vertices[0].z = -1.0f;
-	vertices[0].r = 255;	vertices[0].g = 0;		vertices[0].b = 0;
-	vertices[0].u = 0.0f;	vertices[0].v = 0.0f;
-	vertices[0].nx = 0.0f;	vertices[0].ny = 0.0f;	vertices[0].nz = -1.0f;
+		vertices[0].x = 1.0f;	vertices[0].y = -1.0f;	vertices[0].z = -1.0f;
+		vertices[0].r = 255;	vertices[0].g = 0;		vertices[0].b = 0;
+		vertices[0].u = 0.0f;	vertices[0].v = 0.0f;
+		vertices[0].nx = 0.0f;	vertices[0].ny = 0.0f;	vertices[0].nz = -1.0f;
 
-	//bottom right (in relation to own normal vector)
-	vertices[1].x = -1.0f;	vertices[1].y = -1.0f;	vertices[1].z = -1.0f;
-	vertices[1].r = 0;		vertices[1].g = 255;	vertices[1].b = 0;
-	vertices[1].u = 1.0f;	vertices[1].v = 0.0f;
-	vertices[1].nx = 0.0f;	vertices[1].ny = 0.0f;	vertices[1].nz = -1.0f;
+		//bottom right (in relation to own normal vector)
+		vertices[1].x = -1.0f;	vertices[1].y = -1.0f;	vertices[1].z = -1.0f;
+		vertices[1].r = 0;		vertices[1].g = 255;	vertices[1].b = 0;
+		vertices[1].u = 1.0f;	vertices[1].v = 0.0f;
+		vertices[1].nx = 0.0f;	vertices[1].ny = 0.0f;	vertices[1].nz = -1.0f;
 
 
-	//top right (in relation to own normal vector)
-	vertices[2].x = 1.0f;	vertices[2].y = 1.0f;	vertices[2].z = -1.0f;
-	vertices[2].r = 0;		vertices[2].g = 0;		vertices[2].b = 255;
-	vertices[2].u = 0.0f;	vertices[2].v = 1.0f;
-	vertices[2].nx = 0.0f;	vertices[2].ny = 0.0f;	vertices[2].nz = -1.0f;
+		//top right (in relation to own normal vector)
+		vertices[2].x = 1.0f;	vertices[2].y = 1.0f;	vertices[2].z = -1.0f;
+		vertices[2].r = 0;		vertices[2].g = 0;		vertices[2].b = 255;
+		vertices[2].u = 0.0f;	vertices[2].v = 1.0f;
+		vertices[2].nx = 0.0f;	vertices[2].ny = 0.0f;	vertices[2].nz = -1.0f;
 
-	//bottom left (in relation to own normal vector)
-	vertices[3].x = -1.0f;	vertices[3].y = -1.0f;	vertices[3].z = -1.0f;
-	vertices[3].r = 255;	vertices[3].g = 0;		vertices[3].b = 0;
-	vertices[3].u = 1.0f;	vertices[3].v = 0.0f;
-	vertices[3].nx = 0.0f;	vertices[3].ny = 0.0f;	vertices[3].nz = -1.0f;
+		//bottom left (in relation to own normal vector)
+		vertices[3].x = -1.0f;	vertices[3].y = -1.0f;	vertices[3].z = -1.0f;
+		vertices[3].r = 255;	vertices[3].g = 0;		vertices[3].b = 0;
+		vertices[3].u = 1.0f;	vertices[3].v = 0.0f;
+		vertices[3].nx = 0.0f;	vertices[3].ny = 0.0f;	vertices[3].nz = -1.0f;
 
-	//top left (in relation to own normal vector)
-	vertices[4].x = -1.0f;	vertices[4].y = 1.0f;	vertices[4].z = -1.0f;
-	vertices[4].r = 0;		vertices[4].g = 255;	vertices[4].b = 0;
-	vertices[4].u = 1.0f;	vertices[4].v = 1.0f;
-	vertices[4].nx = 0.0f;	vertices[4].ny = 0.0f;	vertices[4].nz = -1.0f;
+		//top left (in relation to own normal vector)
+		vertices[4].x = -1.0f;	vertices[4].y = 1.0f;	vertices[4].z = -1.0f;
+		vertices[4].r = 0;		vertices[4].g = 255;	vertices[4].b = 0;
+		vertices[4].u = 1.0f;	vertices[4].v = 1.0f;
+		vertices[4].nx = 0.0f;	vertices[4].ny = 0.0f;	vertices[4].nz = -1.0f;
 
-	//top right (in relation to own normal vector)
-	vertices[5].x = 1.0f;	vertices[5].y = 1.0f;	vertices[5].z = -1.0f;
-	vertices[5].r = 0;		vertices[5].g = 0;		vertices[5].b = 255;
-	vertices[5].u = 0.0f;	vertices[5].v = 1.0f;
-	vertices[5].nx = 0.0f;	vertices[5].ny = 0.0f;	vertices[5].nz = -1.0f;
+		//top right (in relation to own normal vector)
+		vertices[5].x = 1.0f;	vertices[5].y = 1.0f;	vertices[5].z = -1.0f;
+		vertices[5].r = 0;		vertices[5].g = 0;		vertices[5].b = 255;
+		vertices[5].u = 0.0f;	vertices[5].v = 1.0f;
+		vertices[5].nx = 0.0f;	vertices[5].ny = 0.0f;	vertices[5].nz = -1.0f;
 
 
 	//backmost face to view space
 		//bottom right (in relation to own normal vector)
-	vertices[6].x = -1.0f;	vertices[6].y = -1.0f;	vertices[6].z = 1.0f;
-	vertices[6].r = 255;	vertices[6].g = 0;		vertices[6].b = 0;
-	vertices[6].u = 0.0f;	vertices[6].v = 0.0f;
-	vertices[6].nx = 0.0f;	vertices[6].ny = 0.0f;	vertices[6].nz = 1.0f;
+		vertices[6].x = -1.0f;	vertices[6].y = -1.0f;	vertices[6].z = 1.0f;
+		vertices[6].r = 255;	vertices[6].g = 0;		vertices[6].b = 0;
+		vertices[6].u = 0.0f;	vertices[6].v = 0.0f;
+		vertices[6].nx = 0.0f;	vertices[6].ny = 0.0f;	vertices[6].nz = 1.0f;
 
-	//bottom left (in relation to own normal vector)
-	vertices[7].x = 1.0f;	vertices[7].y = -1.0f;	vertices[7].z = 1.0f;
-	vertices[7].r = 0;		vertices[7].g = 255;	vertices[7].b = 0;
-	vertices[7].u = 1.0f;	vertices[7].v = 0.0f;
-	vertices[7].nx = 0.0f;	vertices[7].ny = 0.0f;	vertices[7].nz = 1.0f;
+		//bottom left (in relation to own normal vector)
+		vertices[7].x = 1.0f;	vertices[7].y = -1.0f;	vertices[7].z = 1.0f;
+		vertices[7].r = 0;		vertices[7].g = 255;	vertices[7].b = 0;
+		vertices[7].u = 1.0f;	vertices[7].v = 0.0f;
+		vertices[7].nx = 0.0f;	vertices[7].ny = 0.0f;	vertices[7].nz = 1.0f;
 
-	//top left (in relation to own normal vector)
-	vertices[8].x = 1.0f;	vertices[8].y = 1.0f;	vertices[8].z = 1.0f;
-	vertices[8].r = 0;		vertices[8].g = 0;		vertices[8].b = 255;
-	vertices[8].u = 1.0f;	vertices[8].v = 1.0f;
-	vertices[8].nx = 0.0f;	vertices[8].ny = 0.0f;	vertices[8].nz = 1.0f;
+		//top left (in relation to own normal vector)
+		vertices[8].x = 1.0f;	vertices[8].y = 1.0f;	vertices[8].z = 1.0f;
+		vertices[8].r = 0;		vertices[8].g = 0;		vertices[8].b = 255;
+		vertices[8].u = 1.0f;	vertices[8].v = 1.0f;
+		vertices[8].nx = 0.0f;	vertices[8].ny = 0.0f;	vertices[8].nz = 1.0f;
 
-	//bottom right (in relation to own normal vector)
-	vertices[9].x = -1.0f;	vertices[9].y = -1.0f;	vertices[9].z = 1.0f;
-	vertices[9].r = 255;	vertices[9].g = 0;		vertices[9].b = 0;
-	vertices[9].u = 0.0f;	vertices[9].v = 0.0f;
-	vertices[9].nx = 0.0f;	vertices[9].ny = 0.0f;	vertices[9].nz = 1.0f;
+		//bottom right (in relation to own normal vector)
+		vertices[9].x = -1.0f;	vertices[9].y = -1.0f;	vertices[9].z = 1.0f;
+		vertices[9].r = 255;	vertices[9].g = 0;		vertices[9].b = 0;
+		vertices[9].u = 0.0f;	vertices[9].v = 0.0f;
+		vertices[9].nx = 0.0f;	vertices[9].ny = 0.0f;	vertices[9].nz = 1.0f;
 
-	//top right (in relation to own normal vector)
-	vertices[10].x = -1.0f;	vertices[10].y = 1.0f;	vertices[10].z = 1.0f;
-	vertices[10].r = 0;		vertices[10].g = 255;	vertices[10].b = 0;
-	vertices[10].u = 0.0f;	vertices[10].v = 1.0f;
-	vertices[10].nx = 0.0f;	vertices[10].ny = 0.0f;	vertices[10].nz = 1.0f;
+		//top right (in relation to own normal vector)
+		vertices[10].x = -1.0f;	vertices[10].y = 1.0f;	vertices[10].z = 1.0f;
+		vertices[10].r = 0;		vertices[10].g = 255;	vertices[10].b = 0;
+		vertices[10].u = 0.0f;	vertices[10].v = 1.0f;
+		vertices[10].nx = 0.0f;	vertices[10].ny = 0.0f;	vertices[10].nz = 1.0f;
 
-	//top left (in relation to own normal vector)
-	vertices[11].x = 1.0f;	vertices[11].y = 1.0f;	vertices[11].z = 1.0f;
-	vertices[11].r = 0;		vertices[11].g = 0;		vertices[11].b = 255;
-	vertices[11].u = 1.0f;	vertices[11].v = 1.0f;
-	vertices[11].nx = 0.0f;	vertices[11].ny = 0.0f;	vertices[11].nz = 1.0f;
+		//top left (in relation to own normal vector)
+		vertices[11].x = 1.0f;	vertices[11].y = 1.0f;	vertices[11].z = 1.0f;
+		vertices[11].r = 0;		vertices[11].g = 0;		vertices[11].b = 255;
+		vertices[11].u = 1.0f;	vertices[11].v = 1.0f;
+		vertices[11].nx = 0.0f;	vertices[11].ny = 0.0f;	vertices[11].nz = 1.0f;
 
 	//leftmost face to view space
 		//bottom left (in relation to own normal vector)
-	vertices[12].x = -1.0f;	vertices[12].y = -1.0f;	vertices[12].z = -1.0f;
-	vertices[12].r = 255;	vertices[12].g = 0;		vertices[12].b = 0;
-	vertices[12].u = 0.0f;	vertices[12].v = 0.0f;
-	vertices[12].nx = -1.0f; vertices[12].ny = 0.0f;	vertices[12].nz = 0.0f;
+		vertices[12].x = -1.0f;	vertices[12].y = -1.0f;	vertices[12].z = -1.0f;
+		vertices[12].r = 255;	vertices[12].g = 0;		vertices[12].b = 0;
+		vertices[12].u = 0.0f;	vertices[12].v = 0.0f;
+		vertices[12].nx = -1.0f; vertices[12].ny = 0.0f;	vertices[12].nz = 0.0f;
 
-	//bottom right (in relation to own normal vector)
-	vertices[13].x = -1.0f;	vertices[13].y = -1.0f;	vertices[13].z = 1.0f;
-	vertices[13].r = 0;		vertices[13].g = 255;	vertices[13].b = 0;
-	vertices[13].u = 1.0f;	vertices[13].v = 0.0f;
-	vertices[13].nx = -1.0f; vertices[13].ny = 0.0f;	vertices[13].nz = 0.0f;
+		//bottom right (in relation to own normal vector)
+		vertices[13].x = -1.0f;	vertices[13].y = -1.0f;	vertices[13].z = 1.0f;
+		vertices[13].r = 0;		vertices[13].g = 255;	vertices[13].b = 0;
+		vertices[13].u = 1.0f;	vertices[13].v = 0.0f;
+		vertices[13].nx = -1.0f; vertices[13].ny = 0.0f;	vertices[13].nz = 0.0f;
 
-	//top right (in relation to own normal vector)
-	vertices[14].x = -1.0f;	vertices[14].y = 1.0f;	vertices[14].z = 1.0f;
-	vertices[14].r = 0;		vertices[14].g = 0;		vertices[14].b = 255;
-	vertices[14].u = 1.0f;	vertices[14].v = 1.0f;
-	vertices[14].nx = -1.0f; vertices[14].ny = 0.0f;	vertices[14].nz = 0.0f;
+		//top right (in relation to own normal vector)
+		vertices[14].x = -1.0f;	vertices[14].y = 1.0f;	vertices[14].z = 1.0f;
+		vertices[14].r = 0;		vertices[14].g = 0;		vertices[14].b = 255;
+		vertices[14].u = 1.0f;	vertices[14].v = 1.0f;
+		vertices[14].nx = -1.0f; vertices[14].ny = 0.0f;	vertices[14].nz = 0.0f;
 
-	//bottom left (in relation to own normal vector)
-	vertices[15].x = -1.0f;	vertices[15].y = -1.0f;	vertices[15].z = -1.0f;
-	vertices[15].r = 255;	vertices[15].g = 0;		vertices[15].b = 0;
-	vertices[15].u = 0.0f;	vertices[15].v = 0.0f;
-	vertices[15].nx = -1.0f; vertices[15].ny = 0.0f;	vertices[15].nz = 0.0f;
+		//bottom left (in relation to own normal vector)
+		vertices[15].x = -1.0f;	vertices[15].y = -1.0f;	vertices[15].z = -1.0f;
+		vertices[15].r = 255;	vertices[15].g = 0;		vertices[15].b = 0;
+		vertices[15].u = 0.0f;	vertices[15].v = 0.0f;
+		vertices[15].nx = -1.0f; vertices[15].ny = 0.0f;	vertices[15].nz = 0.0f;
 
-	//top left (in relation to own normal vector)
-	vertices[16].x = -1.0f;	vertices[16].y = 1.0f;	vertices[16].z = -1.0f;
-	vertices[16].r = 0;		vertices[16].g = 255;	vertices[16].b = 0;
-	vertices[16].u = 0.0f;	vertices[16].v = 1.0f;
-	vertices[16].nx = -1.0f; vertices[16].ny = 0.0f;	vertices[16].nz = 0.0f;
+		//top left (in relation to own normal vector)
+		vertices[16].x = -1.0f;	vertices[16].y = 1.0f;	vertices[16].z = -1.0f;
+		vertices[16].r = 0;		vertices[16].g = 255;	vertices[16].b = 0;
+		vertices[16].u = 0.0f;	vertices[16].v = 1.0f;
+		vertices[16].nx = -1.0f; vertices[16].ny = 0.0f;	vertices[16].nz = 0.0f;
 
-	//top right (in relation to own normal vector)
-	vertices[17].x = -1.0f;	vertices[17].y = 1.0f;	vertices[17].z = 1.0f;
-	vertices[17].r = 0;		vertices[17].g = 0;		vertices[17].b = 255;
-	vertices[17].u = 1.0f;	vertices[17].v = 1.0f;
-	vertices[17].nx = -1.0f; vertices[17].ny = 0.0f;	vertices[17].nz = 0.0f;
+		//top right (in relation to own normal vector)
+		vertices[17].x = -1.0f;	vertices[17].y = 1.0f;	vertices[17].z = 1.0f;
+		vertices[17].r = 0;		vertices[17].g = 0;		vertices[17].b = 255;
+		vertices[17].u = 1.0f;	vertices[17].v = 1.0f;
+		vertices[17].nx = -1.0f; vertices[17].ny = 0.0f;	vertices[17].nz = 0.0f;
 
 
 	//rightmost face to view space
 		//bottom left (in relation to own normal vector)
-	vertices[18].x = 1.0f;	vertices[18].y = -1.0f;	vertices[18].z = 1.0f;
-	vertices[18].r = 255;	vertices[18].g = 0;		vertices[18].b = 0;
-	vertices[18].u = 0.0f;	vertices[18].v = 0.0f;
-	vertices[18].nx = 1.0f; vertices[18].ny = 0.0f;	vertices[18].nz = 0.0f;
+		vertices[18].x = 1.0f;	vertices[18].y = -1.0f;	vertices[18].z = 1.0f;
+		vertices[18].r = 255;	vertices[18].g = 0;		vertices[18].b = 0;
+		vertices[18].u = 0.0f;	vertices[18].v = 0.0f;
+		vertices[18].nx = 1.0f; vertices[18].ny = 0.0f;	vertices[18].nz = 0.0f;
 
-	//bottom right (in relation to own normal vector)
-	vertices[19].x = 1.0f;	vertices[19].y = -1.0f;	vertices[19].z = -1.0f;
-	vertices[19].r = 0;		vertices[19].g = 255;	vertices[19].b = 0;
-	vertices[19].u = 1.0f;	vertices[19].v = 0.0f;
-	vertices[19].nx = 1.0f; vertices[19].ny = 0.0f;	vertices[19].nz = 0.0f;
+		//bottom right (in relation to own normal vector)
+		vertices[19].x = 1.0f;	vertices[19].y = -1.0f;	vertices[19].z = -1.0f;
+		vertices[19].r = 0;		vertices[19].g = 255;	vertices[19].b = 0;
+		vertices[19].u = 1.0f;	vertices[19].v = 0.0f;
+		vertices[19].nx = 1.0f; vertices[19].ny = 0.0f;	vertices[19].nz = 0.0f;
 
-	//top right (in relation to own normal vector)
-	vertices[20].x = 1.0f;	vertices[20].y = 1.0f;	vertices[20].z = -1.0f;
-	vertices[20].r = 0;		vertices[20].g = 0;		vertices[20].b = 255;
-	vertices[20].u = 1.0f;	vertices[20].v = 1.0f;
-	vertices[20].nx = 1.0f; vertices[20].ny = 0.0f;	vertices[20].nz = 0.0f;
+		//top right (in relation to own normal vector)
+		vertices[20].x = 1.0f;	vertices[20].y = 1.0f;	vertices[20].z = -1.0f;
+		vertices[20].r = 0;		vertices[20].g = 0;		vertices[20].b = 255;
+		vertices[20].u = 1.0f;	vertices[20].v = 1.0f;
+		vertices[20].nx = 1.0f; vertices[20].ny = 0.0f;	vertices[20].nz = 0.0f;
 
-	//bottom left (in relation to own normal vector)
-	vertices[21].x = 1.0f;	vertices[21].y = -1.0f;	vertices[21].z = 1.0f;
-	vertices[21].r = 255;	vertices[21].g = 0;		vertices[21].b = 0;
-	vertices[21].u = 0.0f;	vertices[21].v = 0.0f;
-	vertices[21].nx = 1.0f; vertices[21].ny = 0.0f;	vertices[21].nz = 0.0f;
+		//bottom left (in relation to own normal vector)
+		vertices[21].x = 1.0f;	vertices[21].y = -1.0f;	vertices[21].z = 1.0f;
+		vertices[21].r = 255;	vertices[21].g = 0;		vertices[21].b = 0;
+		vertices[21].u = 0.0f;	vertices[21].v = 0.0f;
+		vertices[21].nx = 1.0f; vertices[21].ny = 0.0f;	vertices[21].nz = 0.0f;
 
-	//top left (in relation to own normal vector)
-	vertices[22].x = 1.0f;	vertices[22].y = 1.0f;	vertices[22].z = 1.0f;
-	vertices[22].r = 0;		vertices[22].g = 255;	vertices[22].b = 0;
-	vertices[22].u = 0.0f;	vertices[22].v = 1.0f;
-	vertices[22].nx = 1.0f; vertices[22].ny = 0.0f;	vertices[22].nz = 0.0f;
+		//top left (in relation to own normal vector)
+		vertices[22].x = 1.0f;	vertices[22].y = 1.0f;	vertices[22].z = 1.0f;
+		vertices[22].r = 0;		vertices[22].g = 255;	vertices[22].b = 0;
+		vertices[22].u = 0.0f;	vertices[22].v = 1.0f;
+		vertices[22].nx = 1.0f; vertices[22].ny = 0.0f;	vertices[22].nz = 0.0f;
 
-	//top right (in relation to own normal vector)
-	vertices[23].x = 1.0f;	vertices[23].y = 1.0f;	vertices[23].z = -1.0f;
-	vertices[23].r = 0;		vertices[23].g = 0;		vertices[23].b = 255;
-	vertices[23].u = 1.0f;	vertices[23].v = 1.0f;
-	vertices[23].nx = 1.0f; vertices[23].ny = 0.0f;	vertices[23].nz = 0.0f;
+		//top right (in relation to own normal vector)
+		vertices[23].x = 1.0f;	vertices[23].y = 1.0f;	vertices[23].z = -1.0f;
+		vertices[23].r = 0;		vertices[23].g = 0;		vertices[23].b = 255;
+		vertices[23].u = 1.0f;	vertices[23].v = 1.0f;
+		vertices[23].nx = 1.0f; vertices[23].ny = 0.0f;	vertices[23].nz = 0.0f;
 
 
 	//topmost face to view space
 		//bottom left (in relation to own normal vector)
-	vertices[24].x = -1.0f;	vertices[24].y = 1.0f;	vertices[24].z = 1.0f;
-	vertices[24].r = 255;	vertices[24].g = 0;		vertices[24].b = 0;
-	vertices[24].u = 0.0f;	vertices[24].v = 0.0f;
-	vertices[24].nx = 0.0f; vertices[24].ny = 1.0f;	vertices[24].nz = 0.0f;
+		vertices[24].x = -1.0f;	vertices[24].y = 1.0f;	vertices[24].z = 1.0f;
+		vertices[24].r = 255;	vertices[24].g = 0;		vertices[24].b = 0;
+		vertices[24].u = 0.0f;	vertices[24].v = 0.0f;
+		vertices[24].nx = 0.0f; vertices[24].ny = 1.0f;	vertices[24].nz = 0.0f;
 
-	//bottom right (in relation to own normal vector)
-	vertices[25].x = 1.0f;	vertices[25].y = 1.0f;	vertices[25].z = 1.0f;
-	vertices[25].r = 0;		vertices[25].g = 255;	vertices[25].b = 0;
-	vertices[25].u = 1.0f;	vertices[25].v = 0.0f;
-	vertices[25].nx = 0.0f; vertices[25].ny = 1.0f;	vertices[25].nz = 0.0f;
+		//bottom right (in relation to own normal vector)
+		vertices[25].x = 1.0f;	vertices[25].y = 1.0f;	vertices[25].z = 1.0f;
+		vertices[25].r = 0;		vertices[25].g = 255;	vertices[25].b = 0;
+		vertices[25].u = 1.0f;	vertices[25].v = 0.0f;
+		vertices[25].nx = 0.0f; vertices[25].ny = 1.0f;	vertices[25].nz = 0.0f;
 
-	//top right (in relation to own normal vector)
-	vertices[26].x = 1.0f;	vertices[26].y = 1.0f;	vertices[26].z = -1.0f;
-	vertices[26].r = 0;		vertices[26].g = 0;		vertices[26].b = 255;
-	vertices[26].u = 1.0f;	vertices[26].v = 1.0f;
-	vertices[26].nx = 0.0f; vertices[26].ny = 1.0f;	vertices[26].nz = 0.0f;
+		//top right (in relation to own normal vector)
+		vertices[26].x = 1.0f;	vertices[26].y = 1.0f;	vertices[26].z = -1.0f;
+		vertices[26].r = 0;		vertices[26].g = 0;		vertices[26].b = 255;
+		vertices[26].u = 1.0f;	vertices[26].v = 1.0f;
+		vertices[26].nx = 0.0f; vertices[26].ny = 1.0f;	vertices[26].nz = 0.0f;
 
-	//bottom left (in relation to own normal vector)
-	vertices[27].x = -1.0f;	vertices[27].y = 1.0f;	vertices[27].z = 1.0f;
-	vertices[27].r = 255;	vertices[27].g = 0;		vertices[27].b = 0;
-	vertices[27].u = 0.0f;	vertices[27].v = 0.0f;
-	vertices[27].nx = 0.0f; vertices[27].ny = 1.0f;	vertices[27].nz = 0.0f;
+		//bottom left (in relation to own normal vector)
+		vertices[27].x = -1.0f;	vertices[27].y = 1.0f;	vertices[27].z = 1.0f;
+		vertices[27].r = 255;	vertices[27].g = 0;		vertices[27].b = 0;
+		vertices[27].u = 0.0f;	vertices[27].v = 0.0f;
+		vertices[27].nx = 0.0f; vertices[27].ny = 1.0f;	vertices[27].nz = 0.0f;
 
-	//top left (in relation to own normal vector)
-	vertices[28].x = -1.0f;	vertices[28].y = 1.0f;	vertices[28].z = -1.0f;
-	vertices[28].r = 0;		vertices[28].g = 255;	vertices[28].b = 0;
-	vertices[28].u = 0.0f;	vertices[28].v = 1.0f;
-	vertices[28].nx = 0.0f; vertices[28].ny = 1.0f;	vertices[28].nz = 0.0f;
+		//top left (in relation to own normal vector)
+		vertices[28].x = -1.0f;	vertices[28].y = 1.0f;	vertices[28].z = -1.0f;
+		vertices[28].r = 0;		vertices[28].g = 255;	vertices[28].b = 0;
+		vertices[28].u = 0.0f;	vertices[28].v = 1.0f;
+		vertices[28].nx = 0.0f; vertices[28].ny = 1.0f;	vertices[28].nz = 0.0f;
 
-	//top right (in relation to own normal vector)
-	vertices[29].x = 1.0f;	vertices[29].y = 1.0f;	vertices[29].z = -1.0f;
-	vertices[29].r = 0;		vertices[29].g = 0;		vertices[29].b = 255;
-	vertices[29].u = 1.0f;	vertices[29].v = 1.0f;
-	vertices[29].nx = 0.0f; vertices[29].ny = 1.0f;	vertices[29].nz = 0.0f;
+		//top right (in relation to own normal vector)
+		vertices[29].x = 1.0f;	vertices[29].y = 1.0f;	vertices[29].z = -1.0f;
+		vertices[29].r = 0;		vertices[29].g = 0;		vertices[29].b = 255;
+		vertices[29].u = 1.0f;	vertices[29].v = 1.0f;
+		vertices[29].nx = 0.0f; vertices[29].ny = 1.0f;	vertices[29].nz = 0.0f;
 
 
 	//bottommost face to view space

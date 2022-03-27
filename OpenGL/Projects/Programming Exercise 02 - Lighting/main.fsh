@@ -42,7 +42,7 @@ void main()
 	vec4 sampledColor = texture(tex, outUV);
 
 	// Pass the sampled color from the texture to our fragColor output variable
-	vec3 textureColor = vec3(sampledColor); 
+	//vec3 textureColor = vec3(sampledColor); 
 
 	//Set value of vertex normal to fragNormal and normalize
 	vec3 fragNormal = normalize(fragvertexNormal);	
@@ -63,8 +63,7 @@ void main()
 	vec3 specular = spec * specularComponent * specularIntensity;
 
 	// add all lighting stuff
-	vec3 finalColor = (ambient + diffuse + specular) * textureColor;
+	vec3 finalColor = (ambient + diffuse + specular) * outColor;
 	//vec3 finalColor = (ambient) * textureColor;
-	fragColor = vec4(finalColor, 1.0f);
-
+	fragColor = vec4(finalColor, 1.0f) * sampledColor;
 }
