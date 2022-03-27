@@ -34,6 +34,14 @@ void main()
 	// our transformation matrix
 	finalPosition = projectionMatrix * viewMatrix * modelMatrix * finalPosition;
 
+	fragPosition = vec3(modelMatrix * vec4(vertexPosition, 1.f));
+	
+	//Calculation of normal matrix
+	normalMatrix = transpose(inverse(modelMatrix));
+
+	// New value for normal vertex that will be passed to fragment shader
+	fragvertexNormal = mat3(normalMatrix) * vertexNormal;
+
 	// gl_Position is a built-in shader variable that we need to set
 	gl_Position = finalPosition;
 
@@ -42,13 +50,4 @@ void main()
 
 	// We pass the UV-coordinates of the current vertex to our output variable
 	outUV = vertexUV;
-
-	//Calculation of normal matrix
-	normalMatrix = transpose(inverse(modelMatrix));
-
-	// New value for normal vertex that will be passed to fragment shader
-	//fragvertexNormal = vec3(normalMatrix * vec4(vertexNormal, 0.0f));
-
-	fragPosition = vec3(modelMatrix * vec4(vertexPosition, 1.f));
-	fragvertexNormal = vec3(mat4(normalMatrix) * vec4(vertexNormal, 0.0f));
 }
