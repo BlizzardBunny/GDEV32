@@ -159,38 +159,38 @@ int main()
 	//frontmost face to view space
 		//bottom left (in relation to own normal vector)
 		vertices[0].x = 1.0f;	vertices[0].y = -1.0f;	vertices[0].z = -1.0f;
-		vertices[0].r = 255;	vertices[0].g = 0;		vertices[0].b = 0;
+		vertices[0].r = 255;	vertices[0].g = 255;		vertices[0].b = 255;
 		vertices[0].u = 0.0f;	vertices[0].v = 0.0f;
 		vertices[0].nx = 0.0f;	vertices[0].ny = 0.0f;	vertices[0].nz = -1.0f;
 
 		//bottom right (in relation to own normal vector)
 		vertices[1].x = -1.0f;	vertices[1].y = -1.0f;	vertices[1].z = -1.0f;
-		vertices[1].r = 0;		vertices[1].g = 255;	vertices[1].b = 0;
+		vertices[1].r = 255;		vertices[1].g = 255;	vertices[1].b = 255;
 		vertices[1].u = 1.0f;	vertices[1].v = 0.0f;
 		vertices[1].nx = 0.0f;	vertices[1].ny = 0.0f;	vertices[1].nz = -1.0f;
 
 
 		//top right (in relation to own normal vector)
 		vertices[2].x = 1.0f;	vertices[2].y = 1.0f;	vertices[2].z = -1.0f;
-		vertices[2].r = 0;		vertices[2].g = 0;		vertices[2].b = 255;
+		vertices[2].r = 255;	vertices[2].g = 255;		vertices[2].b = 255;
 		vertices[2].u = 0.0f;	vertices[2].v = 1.0f;
 		vertices[2].nx = 0.0f;	vertices[2].ny = 0.0f;	vertices[2].nz = -1.0f;
 
 		//bottom left (in relation to own normal vector)
 		vertices[3].x = -1.0f;	vertices[3].y = -1.0f;	vertices[3].z = -1.0f;
-		vertices[3].r = 255;	vertices[3].g = 0;		vertices[3].b = 0;
+		vertices[3].r = 255;	vertices[3].g = 255;		vertices[3].b = 255;
 		vertices[3].u = 1.0f;	vertices[3].v = 0.0f;
 		vertices[3].nx = 0.0f;	vertices[3].ny = 0.0f;	vertices[3].nz = -1.0f;
 
 		//top left (in relation to own normal vector)
 		vertices[4].x = -1.0f;	vertices[4].y = 1.0f;	vertices[4].z = -1.0f;
-		vertices[4].r = 0;		vertices[4].g = 255;	vertices[4].b = 0;
+		vertices[4].r = 255;		vertices[4].g = 255;	vertices[4].b = 255;
 		vertices[4].u = 1.0f;	vertices[4].v = 1.0f;
 		vertices[4].nx = 0.0f;	vertices[4].ny = 0.0f;	vertices[4].nz = -1.0f;
 
 		//top right (in relation to own normal vector)
 		vertices[5].x = 1.0f;	vertices[5].y = 1.0f;	vertices[5].z = -1.0f;
-		vertices[5].r = 0;		vertices[5].g = 0;		vertices[5].b = 255;
+		vertices[5].r = 255;		vertices[5].g = 255;		vertices[5].b = 255;
 		vertices[5].u = 0.0f;	vertices[5].v = 1.0f;
 		vertices[5].nx = 0.0f;	vertices[5].ny = 0.0f;	vertices[5].nz = -1.0f;
 
@@ -198,74 +198,74 @@ int main()
 	//backmost face to view space
 		//bottom right (in relation to own normal vector)
 		vertices[6].x = -1.0f;	vertices[6].y = -1.0f;	vertices[6].z = 1.0f;
-		vertices[6].r = 255;	vertices[6].g = 0;		vertices[6].b = 0;
+		vertices[6].r = 255;	vertices[6].g = 255;		vertices[6].b = 255;
 		vertices[6].u = 0.0f;	vertices[6].v = 0.0f;
 		vertices[6].nx = 0.0f;	vertices[6].ny = 0.0f;	vertices[6].nz = 1.0f;
 
 		//bottom left (in relation to own normal vector)
 		vertices[7].x = 1.0f;	vertices[7].y = -1.0f;	vertices[7].z = 1.0f;
-		vertices[7].r = 0;		vertices[7].g = 255;	vertices[7].b = 0;
+		vertices[7].r = 255;	vertices[7].g = 255;	vertices[7].b = 255;
 		vertices[7].u = 1.0f;	vertices[7].v = 0.0f;
 		vertices[7].nx = 0.0f;	vertices[7].ny = 0.0f;	vertices[7].nz = 1.0f;
 
 		//top left (in relation to own normal vector)
 		vertices[8].x = 1.0f;	vertices[8].y = 1.0f;	vertices[8].z = 1.0f;
-		vertices[8].r = 0;		vertices[8].g = 0;		vertices[8].b = 255;
+		vertices[8].r = 255;	vertices[8].g = 255;		vertices[8].b = 255;
 		vertices[8].u = 1.0f;	vertices[8].v = 1.0f;
 		vertices[8].nx = 0.0f;	vertices[8].ny = 0.0f;	vertices[8].nz = 1.0f;
 
 		//bottom right (in relation to own normal vector)
 		vertices[9].x = -1.0f;	vertices[9].y = -1.0f;	vertices[9].z = 1.0f;
-		vertices[9].r = 255;	vertices[9].g = 0;		vertices[9].b = 0;
+		vertices[9].r = 255;	vertices[9].g = 255;		vertices[9].b = 255;
 		vertices[9].u = 0.0f;	vertices[9].v = 0.0f;
 		vertices[9].nx = 0.0f;	vertices[9].ny = 0.0f;	vertices[9].nz = 1.0f;
 
 		//top right (in relation to own normal vector)
 		vertices[10].x = -1.0f;	vertices[10].y = 1.0f;	vertices[10].z = 1.0f;
-		vertices[10].r = 0;		vertices[10].g = 255;	vertices[10].b = 0;
+		vertices[10].r = 255;	vertices[10].g = 255;	vertices[10].b = 255;
 		vertices[10].u = 0.0f;	vertices[10].v = 1.0f;
 		vertices[10].nx = 0.0f;	vertices[10].ny = 0.0f;	vertices[10].nz = 1.0f;
 
 		//top left (in relation to own normal vector)
 		vertices[11].x = 1.0f;	vertices[11].y = 1.0f;	vertices[11].z = 1.0f;
-		vertices[11].r = 0;		vertices[11].g = 0;		vertices[11].b = 255;
+		vertices[11].r = 255;	vertices[11].g = 255;		vertices[11].b = 255;
 		vertices[11].u = 1.0f;	vertices[11].v = 1.0f;
 		vertices[11].nx = 0.0f;	vertices[11].ny = 0.0f;	vertices[11].nz = 1.0f;
 
 	//leftmost face to view space
 		//bottom left (in relation to own normal vector)
 		vertices[12].x = -1.0f;	vertices[12].y = -1.0f;	vertices[12].z = -1.0f;
-		vertices[12].r = 255;	vertices[12].g = 0;		vertices[12].b = 0;
+		vertices[12].r = 255;	vertices[12].g = 255;		vertices[12].b = 255;
 		vertices[12].u = 0.0f;	vertices[12].v = 0.0f;
 		vertices[12].nx = -1.0f; vertices[12].ny = 0.0f;	vertices[12].nz = 0.0f;
 
 		//bottom right (in relation to own normal vector)
 		vertices[13].x = -1.0f;	vertices[13].y = -1.0f;	vertices[13].z = 1.0f;
-		vertices[13].r = 0;		vertices[13].g = 255;	vertices[13].b = 0;
+		vertices[13].r = 255;	vertices[13].g = 255;	vertices[13].b = 255;
 		vertices[13].u = 1.0f;	vertices[13].v = 0.0f;
 		vertices[13].nx = -1.0f; vertices[13].ny = 0.0f;	vertices[13].nz = 0.0f;
 
 		//top right (in relation to own normal vector)
 		vertices[14].x = -1.0f;	vertices[14].y = 1.0f;	vertices[14].z = 1.0f;
-		vertices[14].r = 0;		vertices[14].g = 0;		vertices[14].b = 255;
+		vertices[14].r = 255;	vertices[14].g = 255;		vertices[14].b = 255;
 		vertices[14].u = 1.0f;	vertices[14].v = 1.0f;
 		vertices[14].nx = -1.0f; vertices[14].ny = 0.0f;	vertices[14].nz = 0.0f;
 
 		//bottom left (in relation to own normal vector)
 		vertices[15].x = -1.0f;	vertices[15].y = -1.0f;	vertices[15].z = -1.0f;
-		vertices[15].r = 255;	vertices[15].g = 0;		vertices[15].b = 0;
+		vertices[15].r = 255;	vertices[15].g = 255;		vertices[15].b = 255;
 		vertices[15].u = 0.0f;	vertices[15].v = 0.0f;
 		vertices[15].nx = -1.0f; vertices[15].ny = 0.0f;	vertices[15].nz = 0.0f;
 
 		//top left (in relation to own normal vector)
 		vertices[16].x = -1.0f;	vertices[16].y = 1.0f;	vertices[16].z = -1.0f;
-		vertices[16].r = 0;		vertices[16].g = 255;	vertices[16].b = 0;
+		vertices[16].r = 255;	vertices[16].g = 255;	vertices[16].b = 255;
 		vertices[16].u = 0.0f;	vertices[16].v = 1.0f;
 		vertices[16].nx = -1.0f; vertices[16].ny = 0.0f;	vertices[16].nz = 0.0f;
 
 		//top right (in relation to own normal vector)
 		vertices[17].x = -1.0f;	vertices[17].y = 1.0f;	vertices[17].z = 1.0f;
-		vertices[17].r = 0;		vertices[17].g = 0;		vertices[17].b = 255;
+		vertices[17].r = 255;	vertices[17].g = 255;		vertices[17].b = 255;
 		vertices[17].u = 1.0f;	vertices[17].v = 1.0f;
 		vertices[17].nx = -1.0f; vertices[17].ny = 0.0f;	vertices[17].nz = 0.0f;
 
@@ -273,37 +273,37 @@ int main()
 	//rightmost face to view space
 		//bottom left (in relation to own normal vector)
 		vertices[18].x = 1.0f;	vertices[18].y = -1.0f;	vertices[18].z = 1.0f;
-		vertices[18].r = 255;	vertices[18].g = 0;		vertices[18].b = 0;
+		vertices[18].r = 255;	vertices[18].g = 255;		vertices[18].b = 255;
 		vertices[18].u = 0.0f;	vertices[18].v = 0.0f;
 		vertices[18].nx = 1.0f; vertices[18].ny = 0.0f;	vertices[18].nz = 0.0f;
 
 		//bottom right (in relation to own normal vector)
 		vertices[19].x = 1.0f;	vertices[19].y = -1.0f;	vertices[19].z = -1.0f;
-		vertices[19].r = 0;		vertices[19].g = 255;	vertices[19].b = 0;
+		vertices[19].r = 255;		vertices[19].g = 255;	vertices[19].b = 255;
 		vertices[19].u = 1.0f;	vertices[19].v = 0.0f;
 		vertices[19].nx = 1.0f; vertices[19].ny = 0.0f;	vertices[19].nz = 0.0f;
 
 		//top right (in relation to own normal vector)
 		vertices[20].x = 1.0f;	vertices[20].y = 1.0f;	vertices[20].z = -1.0f;
-		vertices[20].r = 0;		vertices[20].g = 0;		vertices[20].b = 255;
+		vertices[20].r = 255;	vertices[20].g = 255;		vertices[20].b = 255;
 		vertices[20].u = 1.0f;	vertices[20].v = 1.0f;
 		vertices[20].nx = 1.0f; vertices[20].ny = 0.0f;	vertices[20].nz = 0.0f;
 
 		//bottom left (in relation to own normal vector)
 		vertices[21].x = 1.0f;	vertices[21].y = -1.0f;	vertices[21].z = 1.0f;
-		vertices[21].r = 255;	vertices[21].g = 0;		vertices[21].b = 0;
+		vertices[21].r = 255;	vertices[21].g = 255;		vertices[21].b = 255;
 		vertices[21].u = 0.0f;	vertices[21].v = 0.0f;
 		vertices[21].nx = 1.0f; vertices[21].ny = 0.0f;	vertices[21].nz = 0.0f;
 
 		//top left (in relation to own normal vector)
 		vertices[22].x = 1.0f;	vertices[22].y = 1.0f;	vertices[22].z = 1.0f;
-		vertices[22].r = 0;		vertices[22].g = 255;	vertices[22].b = 0;
+		vertices[22].r = 255;	vertices[22].g = 255;	vertices[22].b = 255;
 		vertices[22].u = 0.0f;	vertices[22].v = 1.0f;
 		vertices[22].nx = 1.0f; vertices[22].ny = 0.0f;	vertices[22].nz = 0.0f;
 
 		//top right (in relation to own normal vector)
 		vertices[23].x = 1.0f;	vertices[23].y = 1.0f;	vertices[23].z = -1.0f;
-		vertices[23].r = 0;		vertices[23].g = 0;		vertices[23].b = 255;
+		vertices[23].r = 255;		vertices[23].g = 255;		vertices[23].b = 255;
 		vertices[23].u = 1.0f;	vertices[23].v = 1.0f;
 		vertices[23].nx = 1.0f; vertices[23].ny = 0.0f;	vertices[23].nz = 0.0f;
 
@@ -311,37 +311,37 @@ int main()
 	//topmost face to view space
 		//bottom left (in relation to own normal vector)
 		vertices[24].x = -1.0f;	vertices[24].y = 1.0f;	vertices[24].z = 1.0f;
-		vertices[24].r = 255;	vertices[24].g = 0;		vertices[24].b = 0;
+		vertices[24].r = 255;	vertices[24].g = 255;		vertices[24].b = 255;
 		vertices[24].u = 0.0f;	vertices[24].v = 0.0f;
 		vertices[24].nx = 0.0f; vertices[24].ny = 1.0f;	vertices[24].nz = 0.0f;
 
 		//bottom right (in relation to own normal vector)
 		vertices[25].x = 1.0f;	vertices[25].y = 1.0f;	vertices[25].z = 1.0f;
-		vertices[25].r = 0;		vertices[25].g = 255;	vertices[25].b = 0;
+		vertices[25].r = 255;		vertices[25].g = 255;	vertices[25].b = 255;
 		vertices[25].u = 1.0f;	vertices[25].v = 0.0f;
 		vertices[25].nx = 0.0f; vertices[25].ny = 1.0f;	vertices[25].nz = 0.0f;
 
 		//top right (in relation to own normal vector)
 		vertices[26].x = 1.0f;	vertices[26].y = 1.0f;	vertices[26].z = -1.0f;
-		vertices[26].r = 0;		vertices[26].g = 0;		vertices[26].b = 255;
+		vertices[26].r = 255;	vertices[26].g = 255;		vertices[26].b = 255;
 		vertices[26].u = 1.0f;	vertices[26].v = 1.0f;
 		vertices[26].nx = 0.0f; vertices[26].ny = 1.0f;	vertices[26].nz = 0.0f;
 
 		//bottom left (in relation to own normal vector)
 		vertices[27].x = -1.0f;	vertices[27].y = 1.0f;	vertices[27].z = 1.0f;
-		vertices[27].r = 255;	vertices[27].g = 0;		vertices[27].b = 0;
+		vertices[27].r = 255;	vertices[27].g = 255;		vertices[27].b = 255;
 		vertices[27].u = 0.0f;	vertices[27].v = 0.0f;
 		vertices[27].nx = 0.0f; vertices[27].ny = 1.0f;	vertices[27].nz = 0.0f;
 
 		//top left (in relation to own normal vector)
 		vertices[28].x = -1.0f;	vertices[28].y = 1.0f;	vertices[28].z = -1.0f;
-		vertices[28].r = 0;		vertices[28].g = 255;	vertices[28].b = 0;
+		vertices[28].r = 255;		vertices[28].g = 255;	vertices[28].b = 255;
 		vertices[28].u = 0.0f;	vertices[28].v = 1.0f;
 		vertices[28].nx = 0.0f; vertices[28].ny = 1.0f;	vertices[28].nz = 0.0f;
 
 		//top right (in relation to own normal vector)
 		vertices[29].x = 1.0f;	vertices[29].y = 1.0f;	vertices[29].z = -1.0f;
-		vertices[29].r = 0;		vertices[29].g = 0;		vertices[29].b = 255;
+		vertices[29].r = 255;		vertices[29].g = 255;		vertices[29].b = 255;
 		vertices[29].u = 1.0f;	vertices[29].v = 1.0f;
 		vertices[29].nx = 0.0f; vertices[29].ny = 1.0f;	vertices[29].nz = 0.0f;
 
@@ -349,37 +349,37 @@ int main()
 	//bottommost face to view space
 		//bottom left (in relation to own normal vector)
 	vertices[30].x = 1.0f;	vertices[30].y = -1.0f;	vertices[30].z = 1.0f;
-	vertices[30].r = 255;	vertices[30].g = 0;		vertices[30].b = 0;
+	vertices[30].r = 255;	vertices[30].g = 255;		vertices[30].b = 255;
 	vertices[30].u = 1.0f;	vertices[30].v = 1.0f;
 	vertices[30].nx = 0.0f; vertices[30].ny = -1.0f;	vertices[30].nz = 0.0f;
 
 	//bottom right (in relation to own normal vector)
 	vertices[31].x = -1.0f;	vertices[31].y = -1.0f;	vertices[31].z = 1.0f;
-	vertices[31].r = 0;		vertices[31].g = 255;	vertices[31].b = 0;
+	vertices[31].r = 255;		vertices[31].g = 255;	vertices[31].b = 255;
 	vertices[31].u = 0.0f;	vertices[31].v = 1.0f;
 	vertices[31].nx = 0.0f; vertices[31].ny = -1.0f; vertices[31].nz = 0.0f;
 
 	//top right (in relation to own normal vector)
 	vertices[32].x = -1.0f;	vertices[32].y = -1.0f;	vertices[32].z = -1.0f;
-	vertices[32].r = 0;		vertices[32].g = 0;		vertices[32].b = 255;
+	vertices[32].r = 255;		vertices[32].g = 255;		vertices[32].b = 255;
 	vertices[32].u = 0.0f;	vertices[32].v = 0.0f;
 	vertices[32].nx = 0.0f; vertices[32].ny = -1.0f; vertices[32].nz = 0.0f;
 
 	//bottom left (in relation to own normal vector)
 	vertices[33].x = 1.0f;	vertices[33].y = -1.0f;	vertices[33].z = 1.0f;
-	vertices[33].r = 255;	vertices[33].g = 0;		vertices[33].b = 0;
+	vertices[33].r = 255;	vertices[33].g = 255;		vertices[33].b = 255;
 	vertices[33].u = 1.0f;	vertices[33].v = 1.0f;
 	vertices[33].nx = 0.0f; vertices[33].ny = -1.0f; vertices[33].nz = 0.0f;
 
 	//top left (in relation to own normal vector)
 	vertices[34].x = 1.0f;	vertices[34].y = -1.0f;	vertices[34].z = -1.0f;
-	vertices[34].r = 0;		vertices[34].g = 255;	vertices[34].b = 0;
+	vertices[34].r = 255;		vertices[34].g = 255;	vertices[34].b = 255;
 	vertices[34].u = 1.0f;	vertices[34].v = 0.0f;
 	vertices[34].nx = 0.0f; vertices[34].ny = -1.0f; vertices[34].nz = 0.0f;
 
 	//top right (in relation to own normal vector)
 	vertices[35].x = -1.0f;	vertices[35].y = -1.0f;	vertices[35].z = -1.0f;
-	vertices[35].r = 0;		vertices[35].g = 0;		vertices[35].b = 255;
+	vertices[35].r = 255;		vertices[35].g = 255;		vertices[35].b = 255;
 	vertices[35].u = 0.0f;	vertices[35].v = 0.0f;
 	vertices[35].nx = 0.0f; vertices[35].ny = -1.0f; vertices[35].nz = 0.0f;
 
@@ -387,229 +387,229 @@ int main()
 	//for quad
 		//bottom left (in relation to own normal vector)
 	vertices[36].x = -0.5f;	vertices[36].y = -1.0f;	vertices[36].z = 0.0f;
-	vertices[36].r = 128;	vertices[36].g = 128;	vertices[36].b = 128;
+	vertices[36].r = 255;	vertices[36].g = 255;	vertices[36].b = 255;
 	vertices[36].u = 0.0f;	vertices[36].v = 0.0f;
 	vertices[36].nx = 0.0f; vertices[36].ny = 0.0f; vertices[36].nz = 1.0f;
 
 	//bottom right (in relation to own normal vector)
 	vertices[37].x = 0.5f;	vertices[37].y = -1.0f;	vertices[37].z = 0.0f;
-	vertices[37].r = 128;	vertices[37].g = 128;	vertices[37].b = 128;
+	vertices[37].r = 255;	vertices[37].g = 255;	vertices[37].b = 255;
 	vertices[37].u = 1.0f;	vertices[37].v = 0.0f;
 	vertices[37].nx = 0.0f; vertices[37].ny = 0.0f; vertices[37].nz = 1.0f;
 
 	//top right (in relation to own normal vector)
 	vertices[38].x = 0.3f;	vertices[38].y = 0.0f;	vertices[38].z = 0.0f;
-	vertices[38].r = 128;	vertices[38].g = 128;	vertices[38].b = 128;
+	vertices[38].r = 255;	vertices[38].g = 255;	vertices[38].b = 255;
 	vertices[38].u = 1.0f;	vertices[38].v = 1.0f;
 	vertices[38].nx = 0.0f; vertices[38].ny = 0.0f; vertices[38].nz = 1.0f;
 
 	//bottom left (in relation to own normal vector)
 	vertices[39].x = -0.5f;	vertices[39].y = -1.0f;	vertices[39].z = 0.0f;
-	vertices[39].r = 128;	vertices[39].g = 128;	vertices[39].b = 128;
+	vertices[39].r = 255;	vertices[39].g = 255;	vertices[39].b = 255;
 	vertices[39].u = 0.0f;	vertices[39].v = 0.0f;
 	vertices[39].nx = 0.0f; vertices[39].ny = 0.0f; vertices[39].nz = 1.0f;
 
 	//top left (in relation to own normal vector)
 	vertices[40].x = -0.3f;	vertices[40].y = 0.0f;	vertices[40].z = 0.0f;
-	vertices[40].r = 128;	vertices[40].g = 128;	vertices[40].b = 128;
+	vertices[40].r = 255;	vertices[40].g = 255;	vertices[40].b = 255;
 	vertices[40].u = 0.0f;	vertices[40].v = 1.0f;
 	vertices[40].nx = 0.0f; vertices[40].ny = 0.0f; vertices[40].nz = 1.0f;
 
 	//top right (in relation to own normal vector)
 	vertices[41].x = 0.3f;	vertices[41].y = 0.0f;	vertices[41].z = 0.0f;
-	vertices[41].r = 128;	vertices[41].g = 128;	vertices[41].b = 128;
+	vertices[41].r = 255;	vertices[41].g = 255;	vertices[41].b = 255;
 	vertices[41].u = 1.0f;	vertices[41].v = 1.0f;
 	vertices[41].nx = 0.0f; vertices[41].ny = 0.0f; vertices[41].nz = 1.0f;
 
 	//box
 		//+z face
 	vertices[42].x = -0.5f;	vertices[42].y = -0.5f;	vertices[42].z = 0.5f;
-	vertices[42].r = 255;	vertices[42].g = 0;		vertices[42].b = 255;
+	vertices[42].r = 255;	vertices[42].g = 255;		vertices[42].b = 255;
 	vertices[42].u = 0.0f;	vertices[42].v = 0.0f;
 	vertices[42].nx = 0.0f; vertices[42].ny = 0.0f; vertices[42].nz = 1.0f;
 
 	vertices[43].x = 0.5f;	vertices[43].y = -0.5f;	vertices[43].z = 0.5f;
-	vertices[43].r = 0;		vertices[43].g = 255;	vertices[43].b = 0;
+	vertices[43].r = 255;		vertices[43].g = 255;	vertices[43].b = 255;
 	vertices[43].u = 1.0f;	vertices[43].v = 0.0f;
 	vertices[42].nx = 0.0f; vertices[42].ny = 0.0f; vertices[42].nz = 1.0f;
 
 	vertices[44].x = 0.5f;	vertices[44].y = 0.5f;	vertices[44].z = 0.5f;
-	vertices[44].r = 0;		vertices[44].g = 0;		vertices[44].b = 255;
+	vertices[44].r = 255;		vertices[44].g = 255;		vertices[44].b = 255;
 	vertices[44].u = 1.0f;	vertices[44].v = 1.0f;
 	vertices[44].nx = 0.0f; vertices[44].ny = 0.0f; vertices[44].nz = 1.0f;
 
 	vertices[45].x = -0.5f;	vertices[45].y = 0.5f;	vertices[45].z = 0.5f;
-	vertices[45].r = 0;		vertices[45].g = 0;		vertices[45].b = 0;
+	vertices[45].r = 255;		vertices[45].g = 255;		vertices[45].b = 255;
 	vertices[45].u = 0.0f;	vertices[45].v = 1.0f;
 	vertices[45].nx = 0.0f; vertices[45].ny = 0.0f; vertices[45].nz = 1.0f;
 
 	//+x face
 	vertices[46].x = 0.5f;	vertices[46].y = -0.5f;	vertices[46].z = 0.5f;
-	vertices[46].r = 255;	vertices[46].g = 0;		vertices[46].b = 0;
+	vertices[46].r = 255;	vertices[46].g = 255;		vertices[46].b = 255;
 	vertices[46].u = 0.0f;	vertices[46].v = 0.0f;
 	vertices[46].nx = 1.0f; vertices[46].ny = 0.0f; vertices[46].nz = 0.0f;
 
 	vertices[47].x = 0.5f;	vertices[47].y = -0.5f;	vertices[47].z = -0.5f;
-	vertices[47].r = 0;		vertices[47].g = 0;		vertices[47].b = 255;
+	vertices[47].r = 255;		vertices[47].g = 255;		vertices[47].b = 255;
 	vertices[47].u = 1.0f;	vertices[47].v = 0.0f;
 	vertices[47].nx = 1.0f; vertices[47].ny = 0.0f; vertices[47].nz = 0.0f;
 
 	vertices[48].x = 0.5f;	vertices[48].y = 0.5f;	vertices[48].z = -0.5f;
-	vertices[48].r = 0;		vertices[48].g = 255;	vertices[48].b = 0;
+	vertices[48].r = 255;		vertices[48].g = 255;	vertices[48].b = 255;
 	vertices[48].u = 1.0f;	vertices[48].v = 1.0f;
 	vertices[48].nx = 1.0f; vertices[48].ny = 0.0f; vertices[48].nz = 0.0f;
 
 	vertices[49].x = 0.5f;	vertices[49].y = 0.5f;	vertices[49].z = 0.5f;
-	vertices[49].r = 0;		vertices[49].g = 0;		vertices[49].b = 0;
+	vertices[49].r = 255;		vertices[49].g = 255;		vertices[49].b = 255;
 	vertices[49].u = 0.0f;	vertices[49].v = 1.0f;
 	vertices[49].nx = 1.0f; vertices[49].ny = 0.0f; vertices[49].nz = 0.0f;
 
 	//-z face
 	vertices[50].x = 0.5f;	vertices[50].y = -0.5f;	vertices[50].z = -0.5f;
-	vertices[50].r = 0;		vertices[50].g = 0;		vertices[50].b = 255;
+	vertices[50].r = 255;		vertices[50].g = 255;		vertices[50].b = 255;
 	vertices[50].u = 0.0f;	vertices[50].v = 0.0f;
 	vertices[50].nx = 0.0f; vertices[50].ny = 0.0f; vertices[50].nz = -1.0f;
 
 	vertices[51].x = -0.5f;	vertices[51].y = -0.5f;	vertices[51].z = -0.5f;
-	vertices[51].r = 0;		vertices[51].g = 0;		vertices[51].b = 0;
+	vertices[51].r = 255;		vertices[51].g = 255;		vertices[51].b = 255;
 	vertices[51].u = 1.0f;	vertices[51].v = 0.0f;
 	vertices[51].nx = 0.0f; vertices[51].ny = 0.0f; vertices[51].nz = -1.0f;
 
 	vertices[52].x = -0.5f;	vertices[52].y = 0.5f;	vertices[52].z = -0.5f;
-	vertices[52].r = 0;		vertices[52].g = 0;		vertices[52].b = 255;
+	vertices[52].r = 255;		vertices[52].g = 255;		vertices[52].b = 255;
 	vertices[52].u = 1.0f;	vertices[52].v = 1.0f;
 	vertices[52].nx = 0.0f; vertices[52].ny = 0.0f; vertices[52].nz = -1.0f;
 
 	vertices[53].x = 0.5f;	vertices[53].y = 0.5f;	vertices[53].z = -0.5f;
-	vertices[53].r = 0;		vertices[53].g = 0;		vertices[53].b = 0;
+	vertices[53].r = 255;		vertices[53].g = 255;		vertices[53].b = 255;
 	vertices[53].u = 0.0f;	vertices[53].v = 1.0f;
 	vertices[53].nx = 0.0f; vertices[53].ny = 0.0f; vertices[53].nz = -1.0f;
 
 	//-x face
 	vertices[54].x = -0.5f;	vertices[54].y = -0.5f;	vertices[54].z = -0.5f;
-	vertices[54].r = 0;		vertices[54].g = 0;		vertices[54].b = 255;
+	vertices[54].r = 255;		vertices[54].g = 255;		vertices[54].b = 255;
 	vertices[54].u = 0.0f;	vertices[54].v = 0.0f;
 	vertices[54].nx = -1.0f; vertices[54].ny = 0.0f; vertices[54].nz = 0.0f;
 
 	vertices[55].x = -0.5f;	vertices[55].y = -0.5f;	vertices[55].z = 0.5f;
-	vertices[55].r = 0;		vertices[55].g = 0;		vertices[55].b = 0;
+	vertices[55].r = 255;		vertices[55].g = 255;		vertices[55].b = 255;
 	vertices[55].u = 1.0f;	vertices[55].v = 0.0f;
 	vertices[55].nx = -1.0f; vertices[55].ny = 0.0f; vertices[55].nz = 0.0f;
 
 	vertices[56].x = -0.5f;	vertices[56].y = 0.5f;	vertices[56].z = 0.5f;
-	vertices[56].r = 0;		vertices[56].g = 0;		vertices[56].b = 255;
+	vertices[56].r = 255;		vertices[56].g = 255;		vertices[56].b = 255;
 	vertices[56].u = 1.0f;	vertices[56].v = 1.0f;
 	vertices[56].nx = -1.0f; vertices[56].ny = 0.0f; vertices[56].nz = 0.0f;
 
 	vertices[57].x = -0.5f;	vertices[57].y = 0.5f;	vertices[57].z = -0.5f;
-	vertices[57].r = 0;		vertices[57].g = 0;		vertices[57].b = 0;
+	vertices[57].r = 255;		vertices[57].g = 255;		vertices[57].b = 255;
 	vertices[57].u = 0.0f;	vertices[57].v = 1.0f;
 	vertices[57].nx = -1.0f; vertices[57].ny = 0.0f; vertices[57].nz = 0.0f;
 
 	//+y face
 	vertices[58].x = -0.5f;	vertices[58].y = 0.5f;	vertices[58].z = 0.5f;
-	vertices[58].r = 0;		vertices[58].g = 0;		vertices[58].b = 255;
+	vertices[58].r = 255;		vertices[58].g = 255;		vertices[58].b = 255;
 	vertices[58].u = 0.0f;	vertices[58].v = 0.0f;
 	vertices[58].nx = 0.0f; vertices[58].ny = 1.0f; vertices[58].nz = 0.0f;
 
 	vertices[59].x = 0.5f;	vertices[59].y = 0.5f;	vertices[59].z = 0.5f;
-	vertices[59].r = 0;		vertices[59].g = 0;		vertices[59].b = 0;
+	vertices[59].r = 255;		vertices[59].g = 255;		vertices[59].b = 255;
 	vertices[59].u = 1.0f;	vertices[59].v = 0.0f;
 	vertices[59].nx = 0.0f; vertices[59].ny = 1.0f; vertices[59].nz = 0.0f;
 
 	vertices[60].x = 0.5f;	vertices[60].y = 0.5f;	vertices[60].z = -0.5f;
-	vertices[60].r = 0;		vertices[60].g = 0;		vertices[60].b = 255;
+	vertices[60].r = 255;		vertices[60].g = 255;		vertices[60].b = 255;
 	vertices[60].u = 1.0f;	vertices[60].v = 1.0f;
 	vertices[60].nx = 0.0f; vertices[60].ny = 1.0f; vertices[60].nz = 0.0f;
 
 	vertices[61].x = -0.5f;	vertices[61].y = 0.5f;	vertices[61].z = -0.5f;
-	vertices[61].r = 0;		vertices[61].g = 0;		vertices[61].b = 0;
+	vertices[61].r = 255;		vertices[61].g = 255;		vertices[61].b = 255;
 	vertices[61].u = 0.0f;	vertices[61].v = 1.0f;
 	vertices[61].nx = 0.0f; vertices[61].ny = 1.0f; vertices[61].nz = 0.0f;
 
 	//-y
 	vertices[62].x = -0.5f;	vertices[62].y = -0.5f;	vertices[62].z = -0.5f;
-	vertices[62].r = 0;		vertices[62].g = 0;		vertices[62].b = 255;
+	vertices[62].r = 255;		vertices[62].g = 255;		vertices[62].b = 255;
 	vertices[62].u = 0.0f;	vertices[62].v = 0.0f;
 	vertices[62].nx = 0.0f; vertices[62].ny = -1.0f; vertices[62].nz = 0.0f;
 
 	vertices[63].x = 0.5f;	vertices[63].y = -0.5f;	vertices[63].z = -0.5f;
-	vertices[63].r = 0;		vertices[63].g = 0;		vertices[63].b = 0;
+	vertices[63].r = 255;		vertices[63].g = 255;		vertices[63].b = 255;
 	vertices[63].u = 1.0f;	vertices[63].v = 0.0f;
 	vertices[63].nx = 0.0f; vertices[63].ny = -1.0f; vertices[63].nz = 0.0f;
 
 	vertices[64].x = 0.5f;	vertices[64].y = -0.5f;	vertices[64].z = 0.5f;
-	vertices[64].r = 0;		vertices[64].g = 0;		vertices[64].b = 255;
+	vertices[64].r = 255;		vertices[64].g = 255;		vertices[64].b = 255;
 	vertices[64].u = 1.0f;	vertices[64].v = 1.0f;
 	vertices[64].nx = 0.0f; vertices[64].ny = -1.0f; vertices[64].nz = 0.0f;
 
 	vertices[65].x = -0.5f;	vertices[65].y = -0.5f;	vertices[65].z = 0.5f;
-	vertices[65].r = 0;		vertices[65].g = 0;		vertices[65].b = 0;
+	vertices[65].r = 255;		vertices[65].g = 255;		vertices[65].b = 255;
 	vertices[65].u = 0.0f;	vertices[65].v = 1.0f;
 	vertices[65].nx = 0.0f; vertices[65].ny = -1.0f; vertices[65].nz = 0.0f;
 
 	//hat
 		//+z face
 	vertices[66].x = -0.5f;	vertices[66].y = 0.5f;	vertices[66].z = 0.5f;
-	vertices[66].r = 0;		vertices[66].g = 0;		vertices[66].b = 0;
+	vertices[66].r = 255;		vertices[66].g = 255;		vertices[66].b = 255;
 	vertices[66].u = 0.0f;	vertices[66].v = 0.0f;
 	vertices[66].nx = 0.0f; vertices[66].ny = 0.5f; vertices[66].nz = 0.5f;
 
 	vertices[67].x = 0.5f;	vertices[67].y = 0.5f;	vertices[67].z = 0.5f;
-	vertices[67].r = 0;		vertices[67].g = 0;		vertices[67].b = 0;
+	vertices[67].r = 255;		vertices[67].g = 255;		vertices[67].b = 255;
 	vertices[67].u = 0.0f;	vertices[67].v = 1.0f;
 	vertices[67].nx = 0.0f; vertices[67].ny = 0.5f; vertices[67].nz = 0.5f;
 
 	vertices[68].x = 0.0f;	vertices[68].y = 1.0f;	vertices[68].z = 0.0f;
-	vertices[68].r = 0;		vertices[68].g = 0;		vertices[68].b = 255;
+	vertices[68].r = 255;		vertices[68].g = 255;		vertices[68].b = 255;
 	vertices[68].u = 0.5f;	vertices[68].v = 1.0f;
 	vertices[68].nx = 0.0f; vertices[68].ny = 0.5f; vertices[68].nz = 0.5f;
 
 	//+x face
 	vertices[69].x = 0.5f;	vertices[69].y = 0.5f;	vertices[69].z = 0.5f;
-	vertices[69].r = 0;		vertices[69].g = 0;		vertices[69].b = 0;
+	vertices[69].r = 255;		vertices[69].g = 255;		vertices[69].b = 255;
 	vertices[69].u = 0.0f;	vertices[69].v = 0.0f;
 	vertices[69].nx = 0.5f; vertices[69].ny = 0.5f; vertices[69].nz = 0.0f;
 
 	vertices[70].x = 0.5f;	vertices[70].y = 0.5f;	vertices[70].z = -0.5f;
-	vertices[70].r = 0;		vertices[70].g = 0;		vertices[70].b = 0;
+	vertices[70].r = 255;		vertices[70].g = 255;		vertices[70].b = 255;
 	vertices[70].u = 0.0f;	vertices[70].v = 1.0f;
 	vertices[70].nx = 0.5f; vertices[70].ny = 0.5f; vertices[70].nz = 0.0f;
 
 	vertices[71].x = 0.0f;	vertices[71].y = 1.0f;	vertices[71].z = 0.0f;
-	vertices[71].r = 0;		vertices[71].g = 0;		vertices[71].b = 255;
+	vertices[71].r = 255;		vertices[71].g = 255;		vertices[71].b = 255;
 	vertices[71].u = 0.5f;	vertices[71].v = 1.0f;
 	vertices[71].nx = 0.5f; vertices[71].ny = 0.5f; vertices[71].nz = 0.0f;
 
 	//-z face
 	vertices[72].x = 0.5f;	vertices[72].y = 0.5f;	vertices[72].z = -0.5f;
-	vertices[72].r = 0;		vertices[72].g = 0;		vertices[72].b = 0;
+	vertices[72].r = 255;		vertices[72].g = 255;		vertices[72].b = 255;
 	vertices[72].u = 0.0f;	vertices[72].v = 0.0f;
 	vertices[72].nx = 0.0f; vertices[72].ny = 0.5f; vertices[72].nz = -0.5f;
 
 	vertices[73].x = -0.5f;	vertices[73].y = 0.5f;	vertices[73].z = -0.5f;
-	vertices[73].r = 0;		vertices[73].g = 0;		vertices[73].b = 0;
+	vertices[73].r = 255;		vertices[73].g = 255;		vertices[73].b = 255;
 	vertices[73].u = 0.0f;	vertices[73].v = 1.0f;
 	vertices[73].nx = 0.0f; vertices[73].ny = 0.5f; vertices[73].nz = -0.5f;
 
 	vertices[74].x = 0.0f;	vertices[74].y = 1.0f;	vertices[74].z = 0.0f;
-	vertices[74].r = 0;		vertices[74].g = 0;		vertices[74].b = 255;
+	vertices[74].r = 255;		vertices[74].g = 255;		vertices[74].b = 255;
 	vertices[74].u = 0.5f;	vertices[74].v = 1.0f;
 	vertices[74].nx = 0.0f; vertices[74].ny = 0.5f; vertices[74].nz = -0.5f;
 
 	//-x face
 	vertices[75].x = -0.5f;	vertices[75].y = 0.5f;	vertices[75].z = -0.5f;
-	vertices[75].r = 0;		vertices[75].g = 0;		vertices[75].b = 0;
+	vertices[75].r = 255;		vertices[75].g = 255;		vertices[75].b = 255;
 	vertices[75].u = 0.0f;	vertices[75].v = 0.0f;
 	vertices[75].nx = -0.5f; vertices[75].ny = 0.5f; vertices[75].nz = 0.0f;
 
 	vertices[76].x = -0.5f;	vertices[76].y = 0.5f;	vertices[76].z = 0.5f;
-	vertices[76].r = 0;		vertices[76].g = 0;		vertices[76].b = 0;
+	vertices[76].r = 255;		vertices[76].g = 255;		vertices[76].b = 255;
 	vertices[76].u = 0.0f;	vertices[76].v = 1.0f;
 	vertices[76].nx = -0.5f; vertices[76].ny = 0.5f; vertices[76].nz = 0.0f;
 
 	vertices[77].x = 0.0f;	vertices[77].y = 1.0f;	vertices[77].z = 0.0f;
-	vertices[77].r = 0;		vertices[77].g = 0;		vertices[77].b = 255;
+	vertices[77].r = 255;		vertices[77].g = 255;		vertices[77].b = 255;
 	vertices[77].u = 0.5f;	vertices[77].v = 1.0f;
 	vertices[77].nx = -0.5f; vertices[77].ny = 0.5f; vertices[77].nz = 0.0f;
 
@@ -639,6 +639,10 @@ int main()
 	// Vertex attribute 2 - UV-coordinates
 	glEnableVertexAttribArray(2);
 	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)(offsetof(Vertex, u)));
+
+	// Vertex attribute 3 - normal coordinates
+	glEnableVertexAttribArray(3);
+	glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)(offsetof(Vertex, nx)));
 
 	glBindVertexArray(0);
 
@@ -873,30 +877,25 @@ int main()
 
 		//Phong Lighting Model uniforms
 		GLint ambientComponentUniform = glGetUniformLocation(program, "ambientComponent");
-		glUniform1f(ambientComponentUniform, ambientComponent);
-
 		GLint ambientIntensityUniform = glGetUniformLocation(program, "ambientIntensity");
-		glUniform3fv(ambientIntensityUniform, 1, glm::value_ptr(ambientIntensity));
-
 		GLint diffuseComponentUniform = glGetUniformLocation(program, "diffuseComponent");
-		glUniform1f(diffuseComponentUniform, diffuseComponent);
-
 		GLint diffuseIntensityUniform = glGetUniformLocation(program, "diffuseIntensity");
-		glUniform3fv(diffuseIntensityUniform, 1, glm::value_ptr(diffuseIntensity));
-
 		GLint specularComponentUniform = glGetUniformLocation(program, "specularComponent");
-		glUniform1f(specularComponentUniform, specularComponent);
-
 		GLint specularIntensityUniform = glGetUniformLocation(program, "specularIntensity");
+		GLint shineUniform = glGetUniformLocation(program, "shine");
+
+		// Passing the light uniforms
+		glUniform1f(ambientComponentUniform, ambientComponent);
+		glUniform3fv(ambientIntensityUniform, 1, glm::value_ptr(ambientIntensity));
+		glUniform1f(diffuseComponentUniform, diffuseComponent);
+		glUniform3fv(diffuseIntensityUniform, 1, glm::value_ptr(diffuseIntensity));
+		glUniform1f(specularComponentUniform, specularComponent);
 		glUniform3fv(specularIntensityUniform, 1, glm::value_ptr(specularIntensity));
+		glUniform1f(shineUniform, shine);
 
 		//uniform for light position
 		GLint lightPosUniform = glGetUniformLocation(program, "lightPos");
 		glUniform3fv(lightPosUniform, 1, glm::value_ptr(lightPos));
-
-		//uniform shininess
-		GLint shineUniform = glGetUniformLocation(program, "shine");
-		glUniform1f(shineUniform, shine);
 
 		// Construct our view frustrum (projection matrix) using the following parameters
 		float fieldOfViewY = glm::radians(45.0f); // Field of view
@@ -942,6 +941,20 @@ int main()
 		// The fourth parameter is a pointer to the matrices that we will set the uniform (actual data)
 		glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, glm::value_ptr(modelMatrix));
 
+		ambientComponent = 0.1f;
+		diffuseComponent = 0.1f;
+		specularComponent = 1.0f;
+		shine = 0.5f;
+
+		// Passing the light uniforms
+		glUniform1f(ambientComponentUniform, ambientComponent);
+		glUniform3fv(ambientIntensityUniform, 1, glm::value_ptr(ambientIntensity));
+		glUniform1f(diffuseComponentUniform, diffuseComponent);
+		glUniform3fv(diffuseIntensityUniform, 1, glm::value_ptr(diffuseIntensity));
+		glUniform1f(specularComponentUniform, specularComponent);
+		glUniform3fv(specularIntensityUniform, 1, glm::value_ptr(specularIntensity));
+		glUniform1f(shineUniform, shine);
+
 		// Draw a quad (4 vertices) using a triangle-fan
 		// Draw the cube (36 vertices) using a triangle
 		//glDrawArrays(GL_TRIANGLES, 0, 36);
@@ -950,7 +963,7 @@ int main()
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, 4);
 
-		//Drawing the quad
+		//Drawing the QUAD
 		glDrawArrays(GL_TRIANGLES, 36, 6);
 
 		// Now for the second quad (wall.jpg), let's scale it by 1.5, rotate it by 45 degrees along the z-axis,
@@ -970,12 +983,25 @@ int main()
 		// We now update our moelMatrix uniform to have the new model matrix
 		glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, glm::value_ptr(modelMatrix));
 
+		ambientComponent = 0.1f;
+		diffuseComponent = 5.0f;
+		specularComponent = 1.0f;
+		shine = 1.0f;
+
+		// Passing the light uniforms
+		glUniform1f(ambientComponentUniform, ambientComponent);
+		glUniform3fv(ambientIntensityUniform, 1, glm::value_ptr(ambientIntensity));
+		glUniform1f(diffuseComponentUniform, diffuseComponent);
+		glUniform3fv(diffuseIntensityUniform, 1, glm::value_ptr(diffuseIntensity));
+		glUniform1f(specularComponentUniform, specularComponent);
+		glUniform3fv(specularIntensityUniform, 1, glm::value_ptr(specularIntensity));
+		glUniform1f(shineUniform, shine);
+
 		// Bind our bioshock.jpg texture to texture unit 0
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, 1);
 
-		// Draw the same quad again, but this time with the matrices updated
-		// Draw the cube (36 vertices) using a triangle
+		// Drawing the ROOM
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 		
 		// Create a 4x4 matrix that will be our model matrix,
@@ -988,7 +1014,7 @@ int main()
 		// The matrix multiplication chain should look like: (Identity) * Translation * Scale
 		// glm::translate() is a function that takes an existing matrix, and appends a translation matrix
 		// to the RIGHT given the tx, ty, tz values.
-		translationVector = glm::vec3(0.0f, -0.5f, -5.0f);
+		translationVector = glm::vec3(-3.0f, -0.5f, -5.0f);
 
 		if (toggleBody)
 		{
@@ -1009,7 +1035,7 @@ int main()
 
 		// glm::scale() is a function that takes an existing matrix, and appends a scale matrix to the RIGHT given the sx, sy, sz values.
 		// Let's scale the quad on all axes by 2.0.
-		scaleVector = glm::vec3(0.5f, 1.0f, 0.5f);
+		scaleVector = glm::vec3(0.25f, 0.5f, 0.25f);
 		modelMatrix = glm::scale(modelMatrix, scaleVector);
 		// At this point, we now have: Identity * Translation * Scale
 
@@ -1020,23 +1046,91 @@ int main()
 		// The fourth parameter is a pointer to the matrices that we will set the uniform (actual data)
 		glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, glm::value_ptr(modelMatrix));
 
+		ambientComponent = 0.1f;
+		diffuseComponent = 0.1f;
+		specularComponent = 1.0f;
+		shine = 1.0f;
+
+		// Passing the light uniforms
+		glUniform1f(ambientComponentUniform, ambientComponent);
+		glUniform3fv(ambientIntensityUniform, 1, glm::value_ptr(ambientIntensity));
+		glUniform1f(diffuseComponentUniform, diffuseComponent);
+		glUniform3fv(diffuseIntensityUniform, 1, glm::value_ptr(diffuseIntensity));
+		glUniform1f(specularComponentUniform, specularComponent);
+		glUniform3fv(specularIntensityUniform, 1, glm::value_ptr(specularIntensity));
+		glUniform1f(shineUniform, shine);
+
 		// Bind our pepe.jpg texture to texture unit 0
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, tex1);
 
-		// Draw a quad (4 vertices) using a triangle-fan
-		glDrawArrays(GL_TRIANGLE_FAN, 42, 4);
-		glDrawArrays(GL_TRIANGLE_FAN, 46, 4);
-		glDrawArrays(GL_TRIANGLE_FAN, 50, 4);
-		glDrawArrays(GL_TRIANGLE_FAN, 54, 4);
-		glDrawArrays(GL_TRIANGLE_FAN, 58, 4);
-		glDrawArrays(GL_TRIANGLE_FAN, 62, 4);
+		// Drawing the BODY
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		// Now for the second quad (bioshock.jpg), let's scale it by 1.5, rotate it by 45 degrees along the z-axis,
 		// and then move it to the right and up.
 		modelMatrix = glm::mat4(1.0f);
 		// (Identity) * Translation
-		translationVector = glm::vec3(0.0f, 0.5f, -5.0f);
+		translationVector = glm::vec3(-3.0f, 0.5f, -5.0f);
+
+		if (toggleBody)
+		{
+			translationVector += glm::vec3(0.0f, 0.25f, 0.0f);
+		}
+		else
+		{
+			translationVector += glm::vec3(0.0f, 0.0f, 0.0f);
+		}
+
+		if (toggleHead)
+		{
+			translationVector += glm::vec3(0.0f, 0.25f, 0.0f);
+		}
+		modelMatrix = glm::translate(modelMatrix, translationVector);
+
+		//(Identity) * Translation * Rotation
+		/*glm::vec3 rotationAxis2(0.0f, 1.0f, 0.0f);
+		modelMatrix = glm::rotate(modelMatrix, glm::radians(90.0f), rotationAxis2);*/
+
+		// (Identity) * Translation * Rotation * Scale
+		scaleVector = glm::vec3(0.5f, 0.5f, 0.5f);
+		modelMatrix = glm::scale(modelMatrix, scaleVector);
+
+		// We now update our moelMatrix uniform to have the new model matrix
+		glUniformMatrix4fv(modelMatrixUniform, 1, GL_FALSE, glm::value_ptr(modelMatrix));
+
+		ambientComponent = 0.1f;
+		diffuseComponent = 0.1f;
+		specularComponent = 1.0f;
+		shine = 0.5f;
+
+		// Passing the light uniforms
+		glUniform1f(ambientComponentUniform, ambientComponent);
+		glUniform3fv(ambientIntensityUniform, 1, glm::value_ptr(ambientIntensity));
+		glUniform1f(diffuseComponentUniform, diffuseComponent);
+		glUniform3fv(diffuseIntensityUniform, 1, glm::value_ptr(diffuseIntensity));
+		glUniform1f(specularComponentUniform, specularComponent);
+		glUniform3fv(specularIntensityUniform, 1, glm::value_ptr(specularIntensity));
+		glUniform1f(shineUniform, shine);
+
+		// Bind our bioshock.jpg texture to texture unit 0
+		glActiveTexture(GL_TEXTURE0);
+		glBindTexture(GL_TEXTURE_2D, tex2);
+
+		// Drawing the HEAD
+		glDrawArrays(GL_TRIANGLES, 6, 6);
+
+		glActiveTexture(GL_TEXTURE0);
+		glBindTexture(GL_TEXTURE_2D, tex1);
+
+		glDrawArrays(GL_TRIANGLES, 0, 6);
+		glDrawArrays(GL_TRIANGLES, 12, 24);
+
+		// Now for the second quad (bioshock.jpg), let's scale it by 1.5, rotate it by 45 degrees along the z-axis,
+		// and then move it to the right and up.
+		modelMatrix = glm::mat4(1.0f);
+		// (Identity) * Translation
+		translationVector = glm::vec3(-3.0f, 0.5f, -5.0f);
 
 		if (toggleBody)
 		{
@@ -1066,19 +1160,9 @@ int main()
 
 		// Bind our bioshock.jpg texture to texture unit 0
 		glActiveTexture(GL_TEXTURE0);
-		glBindTexture(GL_TEXTURE_2D, tex2);
-
-		// Draw the same quad again, but this time with the matrices and texture updated
-		glDrawArrays(GL_TRIANGLE_FAN, 42, 4);
-
-		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, tex1);
 
-		glDrawArrays(GL_TRIANGLE_FAN, 46, 4);
-		glDrawArrays(GL_TRIANGLE_FAN, 50, 4);
-		glDrawArrays(GL_TRIANGLE_FAN, 54, 4);
-		glDrawArrays(GL_TRIANGLE_FAN, 58, 4);
-		glDrawArrays(GL_TRIANGLE_FAN, 62, 4);
+		// Drawing the HAT
 		glDrawArrays(GL_TRIANGLES, 66, 12);
 
 		// "Unuse" the vertex array object

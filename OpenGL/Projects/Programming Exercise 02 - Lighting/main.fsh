@@ -42,7 +42,7 @@ void main()
 	vec4 sampledColor = texture(tex, outUV);
 
 	// Pass the sampled color from the texture to our fragColor output variable
-	//vec3 textureColor = vec3(sampledColor); 
+	vec3 textureColor = vec3(sampledColor); 
 
 	//Set value of vertex normal to fragNormal and normalize
 	vec3 fragNormal = normalize(fragvertexNormal);	
@@ -50,11 +50,11 @@ void main()
 
 	//ambient
 	float ambientStrength = 0.1f;
-	vec3 ambient = ambientComponent * ambientIntensity;
+	vec3 ambient = ambientComponent * textureColor;
 
 	//diffuse lighting
 	float diff = max(dot(fragNormal, lightDir), 0.0f);
-	vec3 diffuse = diff * diffuseComponent * diffuseIntensity;
+	vec3 diffuse = diff * diffuseComponent * textureColor;
 
 	//specular lighting
 	vec3 viewDir = normalize(cameraPosition - fragPosition);
