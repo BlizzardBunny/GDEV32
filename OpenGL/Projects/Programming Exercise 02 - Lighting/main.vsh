@@ -11,7 +11,10 @@ out vec3 outColor;
 // Output UV-coordinates
 out vec2 outUV;
 // Output new normal vertex
-out vec3 outvertexNormal;
+out vec3 fragvertexNormal;
+// Output position of light
+out vec3 fragPosition;
+
 
 // Normal Matrix for the normal vector
 mat4 normalMatrix;
@@ -47,13 +50,4 @@ void main()
 
 	// We pass the UV-coordinates of the current vertex to our output variable
 	outUV = vertexUV;
-<<<<<<< Updated upstream
-
-	//Calculation of normal matrix
-	normalMatrix = transpose(inverse(modelMatrix));
-
-	// New value for normal vertex that will be passed to fragment shader
-	outvertexNormal = vec3(normalMatrix * vec4(vertexNormal, 0.0f));
-=======
->>>>>>> Stashed changes
 }

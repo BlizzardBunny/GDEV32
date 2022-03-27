@@ -6,14 +6,29 @@ in vec3 outColor;
 // Take the 'outUV' output from the vertex shader as input of our fragment shader
 in vec2 outUV;
 
-// Taking 'outvertexNormal' from vertex shader as input to fragment shader
-in vec3 outvertexNormal;
+// Taking 'fragvertexNormal' from vertex shader as input to fragment shader
+in vec3 fragvertexNormal;
+
+//Input frag position from vsh
+in vec3 fragPosition;
 
 // Final color of the fragment, which we are required to output
 out vec4 fragColor;
 
 // Uniform variable that will hold the texture unit of the texture that we want to use
 uniform sampler2D tex;
+
+// light color
+uniform vec3 lightColor;
+
+//from main.cpp
+uniform vec3 cameraPosition;
+
+// light position vector
+uniform vec3 lightPos;
+
+// shininess of material
+uniform float shine;
 
 // If we want to simultaneously use another texture at a different texture unit,
 // we can create another uniform for it.
@@ -27,12 +42,9 @@ void main()
 	vec4 sampledColor = texture(tex, outUV);
 
 	// Pass the sampled color from the texture to our fragColor output variable
-	fragColor = sampledColor; 
+	vec3 textureColor = vec3(sampledColor); 
 
 	//Set value of vertex normal to fragNormal and normalize
-<<<<<<< Updated upstream
-	vec3 fragNormal = normalize(outvertexNormal);
-=======
 	vec3 fragNormal = normalize(fragvertexNormal);	
 	vec3 lightDir = normalize(lightPos - fragPosition);
 
@@ -51,8 +63,8 @@ void main()
 	vec3 specular = spec * lightColor;
 
 	// add all lighting stuff
-	vec3 finalColor = (ambient + diffuse + specular) * outColor;
+	vec3 finalColor = (ambient + diffuse + specular) * textureColor;
+	//vec3 finalColor = (ambient) * textureColor;
 	fragColor = vec4(finalColor, 1.0f);
 
->>>>>>> Stashed changes
 }
