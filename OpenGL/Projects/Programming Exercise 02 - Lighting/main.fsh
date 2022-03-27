@@ -50,11 +50,11 @@ void main()
 
 	//ambient
 	float ambientStrength = 0.1f;
-	vec3 ambient = ambientComponent * ambientIntensity;
+	vec3 ambient = ambientComponent * textureColor;
 
 	//diffuse lighting
 	float diff = max(dot(fragNormal, lightDir), 0.0f);
-	vec3 diffuse = diff * diffuseComponent * diffuseIntensity;
+	vec3 diffuse = diff * diffuseComponent * textureColor;
 
 	//specular lighting
 	vec3 viewDir = normalize(cameraPosition - fragPosition);
@@ -63,8 +63,7 @@ void main()
 	vec3 specular = spec * specularComponent * specularIntensity;
 
 	// add all lighting stuff
-	vec3 finalColor = (ambient + diffuse + specular) * textureColor;
+	vec3 finalColor = (ambient + diffuse + specular) * outColor;
 	//vec3 finalColor = (ambient) * textureColor;
-	fragColor = vec4(finalColor, 1.0f);
-
+	fragColor = vec4(finalColor, 1.0f) * sampledColor;
 }
