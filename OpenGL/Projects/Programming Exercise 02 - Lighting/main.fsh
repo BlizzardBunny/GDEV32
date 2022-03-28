@@ -51,6 +51,11 @@ void main()
 	//ambient light
 	vec3 ambient = ambientComponent * textureColor;
 
+	// =======ATTENUATION===========
+	//For attenuations
+	float a, b, c;
+	float d = sqrt(pow(lightPos.x - fragPosition.x, 2) + pow(lightPos.y - fragPosition.y, 2));
+	float atten = 1 / (a + (b * d) + (c * pow(d, 2)));
 
 	// =======POINT LIGHT===========
 	//diffuse lighting for point light
@@ -63,24 +68,35 @@ void main()
 	float spec = pow(max(dot(viewDir, reflectDir), 0.0f), shine);
 	vec3 Pointspecular = spec * specularComponent * specularIntensity;
 
+	//Attenuation for point
+	a = 1.0f;
+	b = 0.7f;
+	c = 1.8f;
+	float attenPoint = atten;
+
 
 	// =======DIRECTIONAL LIGHT===========
 	//light direction
-	vec3 DirlightDir = normalize(-lightDir);
+	lightDir = { 10.0f, 10.0f, 10.0f };
 
 	//diffuse lighting for directional light
-	float diff = max(dot(fragNormal, DirlightDir), 0.0f);
+	diff = max(dot(fragNormal, lightDir), 0.0f);
 	vec3 Dirdiffuse = diff * diffuseComponent * textureColor;
 
 	//specular lighting for directional light
-	vec3 viewDir = normalize(cameraPosition - fragPosition);
-	vec3 reflectDir = reflect(-DirlightDir, fragNormal);
-	float spec = pow(max(dot(viewDir, reflectDir), 0.0f), shine);
+	reflectDir = reflect(-lightDir, fragNormal);
+	spec = pow(max(dot(viewDir, reflectDir), 0.0f), shine);
 	vec3 Dirspecular = spec * specularComponent * specularIntensity;
+
+	//Attenuation for directional
+	a = 1.0f;
+	b = 0.35f;
+	c = 0.44f;
+	float attenDir = atten;
 
 
 	// =======PHONG LIGHTING MODEL EQUATION===========
 	// add all lighting stuff
-	vec3 finalColor = (ambient + (Pointdiffuse + Dirdiffuse) + (Pointspecular + Dirspecular)) * outColor;
+	vec3 finalColor = (ambient + ((Pointdiffuse * Dirdiffuse) + (Pointspecular * Dirspecular)) * attenPoint * attenDir) * outColor;
 	fragColor = vec4(finalColor, 1.0f) * sampledColor;
 }
