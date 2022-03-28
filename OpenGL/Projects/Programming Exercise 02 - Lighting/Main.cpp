@@ -76,9 +76,9 @@ glm::vec3 lightPos = { 0.0f, 1.0f, 0.0f };
 float shine = 32.0f;
 
 float ambientComponent = 0.1f;
-glm::vec3 ambientIntensity = { 1.0f, 1.0f, 1.0f };
+
 float diffuseComponent = 1.0f;
-glm::vec3 diffuseIntensity = { 1.0f, 1.0f, 1.0f };
+
 float specularComponent = 1.0f;
 glm::vec3 specularIntensity = { 1.0f, 1.0f, 1.0f };
 
@@ -877,18 +877,14 @@ int main()
 
 		//Phong Lighting Model uniforms
 		GLint ambientComponentUniform = glGetUniformLocation(program, "ambientComponent");
-		GLint ambientIntensityUniform = glGetUniformLocation(program, "ambientIntensity");
 		GLint diffuseComponentUniform = glGetUniformLocation(program, "diffuseComponent");
-		GLint diffuseIntensityUniform = glGetUniformLocation(program, "diffuseIntensity");
 		GLint specularComponentUniform = glGetUniformLocation(program, "specularComponent");
 		GLint specularIntensityUniform = glGetUniformLocation(program, "specularIntensity");
 		GLint shineUniform = glGetUniformLocation(program, "shine");
 
 		// Passing the light uniforms
 		glUniform1f(ambientComponentUniform, ambientComponent);
-		glUniform3fv(ambientIntensityUniform, 1, glm::value_ptr(ambientIntensity));
 		glUniform1f(diffuseComponentUniform, diffuseComponent);
-		glUniform3fv(diffuseIntensityUniform, 1, glm::value_ptr(diffuseIntensity));
 		glUniform1f(specularComponentUniform, specularComponent);
 		glUniform3fv(specularIntensityUniform, 1, glm::value_ptr(specularIntensity));
 		glUniform1f(shineUniform, shine);
@@ -948,9 +944,7 @@ int main()
 
 		// Passing the light uniforms
 		glUniform1f(ambientComponentUniform, ambientComponent);
-		glUniform3fv(ambientIntensityUniform, 1, glm::value_ptr(ambientIntensity));
 		glUniform1f(diffuseComponentUniform, diffuseComponent);
-		glUniform3fv(diffuseIntensityUniform, 1, glm::value_ptr(diffuseIntensity));
 		glUniform1f(specularComponentUniform, specularComponent);
 		glUniform3fv(specularIntensityUniform, 1, glm::value_ptr(specularIntensity));
 		glUniform1f(shineUniform, shine);
@@ -990,9 +984,7 @@ int main()
 
 		// Passing the light uniforms
 		glUniform1f(ambientComponentUniform, ambientComponent);
-		glUniform3fv(ambientIntensityUniform, 1, glm::value_ptr(ambientIntensity));
 		glUniform1f(diffuseComponentUniform, diffuseComponent);
-		glUniform3fv(diffuseIntensityUniform, 1, glm::value_ptr(diffuseIntensity));
 		glUniform1f(specularComponentUniform, specularComponent);
 		glUniform3fv(specularIntensityUniform, 1, glm::value_ptr(specularIntensity));
 		glUniform1f(shineUniform, shine);
@@ -1053,9 +1045,7 @@ int main()
 
 		// Passing the light uniforms
 		glUniform1f(ambientComponentUniform, ambientComponent);
-		glUniform3fv(ambientIntensityUniform, 1, glm::value_ptr(ambientIntensity));
 		glUniform1f(diffuseComponentUniform, diffuseComponent);
-		glUniform3fv(diffuseIntensityUniform, 1, glm::value_ptr(diffuseIntensity));
 		glUniform1f(specularComponentUniform, specularComponent);
 		glUniform3fv(specularIntensityUniform, 1, glm::value_ptr(specularIntensity));
 		glUniform1f(shineUniform, shine);
@@ -1106,9 +1096,7 @@ int main()
 
 		// Passing the light uniforms
 		glUniform1f(ambientComponentUniform, ambientComponent);
-		glUniform3fv(ambientIntensityUniform, 1, glm::value_ptr(ambientIntensity));
 		glUniform1f(diffuseComponentUniform, diffuseComponent);
-		glUniform3fv(diffuseIntensityUniform, 1, glm::value_ptr(diffuseIntensity));
 		glUniform1f(specularComponentUniform, specularComponent);
 		glUniform3fv(specularIntensityUniform, 1, glm::value_ptr(specularIntensity));
 		glUniform1f(shineUniform, shine);

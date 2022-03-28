@@ -25,7 +25,7 @@ uniform vec3 cameraPosition;
 uniform vec3 lightPos;
 
 uniform float ambientComponent, diffuseComponent, specularComponent;
-uniform vec3 ambientIntensity, diffuseIntensity, specularIntensity;
+uniform vec3 specularIntensity;
 
 // shininess of material
 uniform float shine;
