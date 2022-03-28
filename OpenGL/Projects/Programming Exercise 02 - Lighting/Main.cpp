@@ -76,10 +76,10 @@ void processInput(GLFWwindow *window);
 
 glm::vec3 cameraPosition = { 0.0f, 0.0f, 0.0f };//for wasd
 
-glm::vec3 PointlightPos = { 0.0f, 1.0f, 0.0f };
-glm::vec3 SpotlightPos = { 0.0f, 1.0f, 0.0f };
-glm::vec3 SpotlightDir = { 0.0f, -1.0f, 0.0f };
-float SpotlightAngle = glm::radians(glm::cos(1));
+glm::vec3 PointlightPos = { -6.0f, 0.5f, -6.0f };
+glm::vec3 SpotlightPos = { 6.0f, 1.0f, -6.0f };
+glm::vec3 SpotlightDir = { 0.0f, 1.0f, -1.0f };
+float SpotlightAngle = glm::radians(glm::cos(10));
 
 float ambientComponent = 0.1f;
 float diffuseComponent = 1.0f;
