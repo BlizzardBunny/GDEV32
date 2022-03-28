@@ -72,15 +72,14 @@ void processInput(GLFWwindow *window);
 
 glm::vec3 cameraPosition = { 0.0f, 0.0f, 0.0f };//for wasd
 
-glm::vec3 lightPos = { 0.0f, 1.0f, 0.0f };
-float shine = 32.0f;
+glm::vec3 PointlightPos = { 0.0f, 1.0f, 0.0f };
+glm::vec3 SpotlightPos = { 3.0f, 3.0f, -1.0f };
 
 float ambientComponent = 0.1f;
-
 float diffuseComponent = 1.0f;
-
 float specularComponent = 1.0f;
 glm::vec3 specularIntensity = { 1.0f, 1.0f, 1.0f };
+float shine = 32.0f;
 
 glm::vec3 target = { 0.0f, 0.0f, -1.0f }; // Target is a specific point that the camera is looking at
 glm::vec3 up = { 0.0f, 0.1f, 0.0f }; // Global up vector (which will be used by the lookAt function to calculate the camera's right and up vectors)
@@ -889,9 +888,11 @@ int main()
 		glUniform3fv(specularIntensityUniform, 1, glm::value_ptr(specularIntensity));
 		glUniform1f(shineUniform, shine);
 
-		//uniform for light position
-		GLint lightPosUniform = glGetUniformLocation(program, "lightPos");
-		glUniform3fv(lightPosUniform, 1, glm::value_ptr(lightPos));
+		//uniform for light positions
+		GLint PointlightPosUniform = glGetUniformLocation(program, "PointlightPos");
+		glUniform3fv(PointlightPosUniform, 1, glm::value_ptr(PointlightPos));
+		GLint SpotlightPosUniform = glGetUniformLocation(program, "SpotlightPos");
+		glUniform3fv(SpotlightPosUniform, 1, glm::value_ptr(SpotlightPos));
 
 		// Construct our view frustrum (projection matrix) using the following parameters
 		float fieldOfViewY = glm::radians(45.0f); // Field of view

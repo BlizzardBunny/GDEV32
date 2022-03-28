@@ -22,7 +22,7 @@ uniform sampler2D tex;
 uniform vec3 cameraPosition;
 
 // light position vector
-uniform vec3 lightPos;
+uniform vec3 PointlightPos;
 
 uniform float ambientComponent, diffuseComponent, specularComponent;
 uniform vec3 specularIntensity;
@@ -46,24 +46,39 @@ void main()
 
 	//Set value of vertex normal to fragNormal and normalize
 	vec3 fragNormal = normalize(fragvertexNormal);	
-	vec3 lightDir = normalize(lightPos - fragPosition);
 
 	//ambient
 	float ambientStrength = 0.1f;
 	vec3 ambient = ambientComponent * textureColor;
+	
+	// =======POINT LIGHT===========
+	vec3 lightDir = normalize(PointlightPos - fragPosition);
 
 	//diffuse lighting
 	float diff = max(dot(fragNormal, lightDir), 0.0f);
-	vec3 diffuse = diff * diffuseComponent * textureColor;
+	vec3 Pointdiffuse = diff * diffuseComponent * textureColor;
 
 	//specular lighting
 	vec3 viewDir = normalize(cameraPosition - fragPosition);
 	vec3 reflectDir = reflect(-lightDir, fragNormal);
 	float spec = pow(max(dot(viewDir, reflectDir), 0.0f), shine);
-	vec3 specular = spec * specularComponent * specularIntensity;
+	vec3 Pointspecular = spec * specularComponent * specularIntensity;
+	
+	// =======POINT LIGHT===========
+	lightDir = normalize(PointlightPos - fragPosition);
+
+	//diffuse lighting
+	diff = max(dot(fragNormal, lightDir), 0.0f);
+	vec3 Spotdiffuse = diff * diffuseComponent * textureColor;
+
+	//specular lighting
+	viewDir = normalize(cameraPosition - fragPosition);
+	reflectDir = reflect(-lightDir, fragNormal);
+	spec = pow(max(dot(viewDir, reflectDir), 0.0f), shine);
+	vec3 Spotspecular = spec * specularComponent * specularIntensity;
 
 	// add all lighting stuff
-	vec3 finalColor = (ambient + diffuse + specular) * outColor;
+	vec3 finalColor = (ambient + Pointdiffuse + Pointspecular) * outColor;
 	//vec3 finalColor = (ambient) * textureColor;
 	fragColor = vec4(finalColor, 1.0f) * sampledColor;
 }

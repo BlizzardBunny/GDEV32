@@ -1,6 +1,6 @@
 ﻿  Main.cpp
-D:\MS Word files\School\ADMU\4th year\2nd Sem\GDEV\OpenGL\Projects\Programming Exercise 02 - Lighting\Main.cpp(101,14): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\MS Word files\School\ADMU\4th year\2nd Sem\GDEV\OpenGL\Projects\Programming Exercise 02 - Lighting\Main.cpp(801,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\MS Word files\School\ADMU\4th year\2nd Sem\GDEV\OpenGL\Projects\Programming Exercise 02 - Lighting\Main.cpp(100,14): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\MS Word files\School\ADMU\4th year\2nd Sem\GDEV\OpenGL\Projects\Programming Exercise 02 - Lighting\Main.cpp(800,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   Generating code
   0 of 407 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
