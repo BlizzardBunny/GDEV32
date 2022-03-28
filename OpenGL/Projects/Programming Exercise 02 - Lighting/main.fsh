@@ -69,15 +69,18 @@ void main()
 	vec3 Pointspecular = spec * specularComponent * specularIntensity;
 
 	//Attenuation for point
-	a = 1.0f;
-	b = 0.7f;
-	c = 1.8f;
-	float attenPoint = atten;
+	a = 0.1f;
+	b = 0.1f;
+	c = 0.1f;
+	float attenPoint = 1 / (a + (b * d) + (c * pow(d, 2)));
 
+	vec3 PointComponent = (Pointdiffuse + Pointspecular) * attenPoint;
 
 	// =======DIRECTIONAL LIGHT===========
+	vec3 directionColor = vec3(0.1f, 0.1f, 0.0f);
+	
 	//light direction
-	lightDir = { 10.0f, 10.0f, 10.0f };
+	lightDir = vec3(10.0f, 10.0f, 10.0f);
 
 	//diffuse lighting for directional light
 	diff = max(dot(fragNormal, lightDir), 0.0f);
@@ -89,14 +92,15 @@ void main()
 	vec3 Dirspecular = spec * specularComponent * specularIntensity;
 
 	//Attenuation for directional
-	a = 1.0f;
-	b = 0.35f;
-	c = 0.44f;
-	float attenDir = atten;
-
+	a = 0.05f;
+	b = 0.05f;
+	c = 0.05f;
+	float attenDir = 1 / (a + (b * d) + (c * pow(d, 2)));
+	
+	vec3 DirComponent = ((Dirdiffuse + Dirspecular) * attenDir) * directionColor;
 
 	// =======PHONG LIGHTING MODEL EQUATION===========
 	// add all lighting stuff
-	vec3 finalColor = (ambient + ((Pointdiffuse * Dirdiffuse) + (Pointspecular * Dirspecular)) * attenPoint * attenDir) * outColor;
+	vec3 finalColor = (ambient + (PointComponent + DirComponent)) * outColor;
 	fragColor = vec4(finalColor, 1.0f) * sampledColor;
 }
