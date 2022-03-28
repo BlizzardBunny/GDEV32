@@ -48,22 +48,39 @@ void main()
 	vec3 fragNormal = normalize(fragvertexNormal);	
 	vec3 lightDir = normalize(lightPos - fragPosition);
 
-	//ambient
-	float ambientStrength = 0.1f;
+	//ambient light
 	vec3 ambient = ambientComponent * textureColor;
 
-	//diffuse lighting
-	float diff = max(dot(fragNormal, lightDir), 0.0f);
-	vec3 diffuse = diff * diffuseComponent * textureColor;
 
-	//specular lighting
+	// =======POINT LIGHT===========
+	//diffuse lighting for point light
+	float diff = max(dot(fragNormal, lightDir), 0.0f);
+	vec3 Pointdiffuse = diff * diffuseComponent * textureColor;
+
+	//specular lighting for point light
 	vec3 viewDir = normalize(cameraPosition - fragPosition);
 	vec3 reflectDir = reflect(-lightDir, fragNormal);
 	float spec = pow(max(dot(viewDir, reflectDir), 0.0f), shine);
-	vec3 specular = spec * specularComponent * specularIntensity;
+	vec3 Pointspecular = spec * specularComponent * specularIntensity;
 
+
+	// =======DIRECTIONAL LIGHT===========
+	//light direction
+	vec3 DirlightDir = normalize(-lightDir);
+
+	//diffuse lighting for directional light
+	float diff = max(dot(fragNormal, DirlightDir), 0.0f);
+	vec3 Dirdiffuse = diff * diffuseComponent * textureColor;
+
+	//specular lighting for directional light
+	vec3 viewDir = normalize(cameraPosition - fragPosition);
+	vec3 reflectDir = reflect(-DirlightDir, fragNormal);
+	float spec = pow(max(dot(viewDir, reflectDir), 0.0f), shine);
+	vec3 Dirspecular = spec * specularComponent * specularIntensity;
+
+
+	// =======PHONG LIGHTING MODEL EQUATION===========
 	// add all lighting stuff
-	vec3 finalColor = (ambient + diffuse + specular) * outColor;
-	//vec3 finalColor = (ambient) * textureColor;
+	vec3 finalColor = (ambient + (Pointdiffuse + Dirdiffuse) + (Pointspecular + Dirspecular)) * outColor;
 	fragColor = vec4(finalColor, 1.0f) * sampledColor;
 }
