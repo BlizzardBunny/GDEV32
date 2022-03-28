@@ -108,10 +108,10 @@ void main()
 	// check if in shadow
 	
 	vec3 dirLighttoFrag = normalize(SpotlightPos - fragPosition);
-	float dotProduct = dot(normalize(SpotlightDir), dirLighttoFrag);
+	float dotProduct = dot(normalize(-SpotlightDir), dirLighttoFrag);
 	
 	vec3 SpotComponent;
-	if (dotProduct > SpotlightAngle)
+	if (dotProduct <= SpotlightAngle)
 	{
 		SpotComponent = vec3(0.0f, 0.0f, 0.0f);
 	}
