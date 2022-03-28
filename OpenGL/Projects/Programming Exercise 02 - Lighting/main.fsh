@@ -21,8 +21,12 @@ uniform sampler2D tex;
 //from main.cpp
 uniform vec3 cameraPosition;
 
-// light position vector
+// light position vectors
 uniform vec3 PointlightPos;
+
+uniform vec3 SpotlightPos;
+uniform vec3 SpotlightDir;
+uniform float SpotlightAngle;
 
 uniform float ambientComponent, diffuseComponent, specularComponent;
 uniform vec3 specularIntensity;
@@ -63,22 +67,41 @@ void main()
 	vec3 reflectDir = reflect(-lightDir, fragNormal);
 	float spec = pow(max(dot(viewDir, reflectDir), 0.0f), shine);
 	vec3 Pointspecular = spec * specularComponent * specularIntensity;
+		
+	vec3 PointlightColor = vec3(1.0f, 1.0f, 1.0f);
+	vec3 PointComponents = (Pointdiffuse + Pointspecular) * PointlightColor;
 	
-	// =======POINT LIGHT===========
-	lightDir = normalize(PointlightPos - fragPosition);
+	// =======SPOT LIGHT===========
+	// check if in shadow
+	
+	vec3 dirLighttoFrag = normalize(SpotlightPos - fragPosition);
+	float dotProduct = dot(normalize(SpotlightDir), dirLighttoFrag);
+	
+	vec3 SpotComponents;
+	if (dotProduct > SpotlightAngle)
+	{
+		SpotComponents = vec3(0.0f, 0.0f, 0.0f);
+	}
+	else
+	{
+		lightDir = normalize(SpotlightPos - fragPosition);	
+	
+		//diffuse lighting
+		diff = max(dot(fragNormal, lightDir), 0.0f);
+		vec3 Spotdiffuse = diff * diffuseComponent * textureColor;
 
-	//diffuse lighting
-	diff = max(dot(fragNormal, lightDir), 0.0f);
-	vec3 Spotdiffuse = diff * diffuseComponent * textureColor;
-
-	//specular lighting
-	viewDir = normalize(cameraPosition - fragPosition);
-	reflectDir = reflect(-lightDir, fragNormal);
-	spec = pow(max(dot(viewDir, reflectDir), 0.0f), shine);
-	vec3 Spotspecular = spec * specularComponent * specularIntensity;
+		//specular lighting
+		viewDir = normalize(cameraPosition - fragPosition);
+		reflectDir = reflect(-lightDir, fragNormal);
+		spec = pow(max(dot(viewDir, reflectDir), 0.0f), shine);
+		vec3 Spotspecular = spec * specularComponent * specularIntensity;
+		
+		vec3 spotlightColor = vec3(0.0f, 1.0f, 0.0f);
+		SpotComponents = (Spotdiffuse + Spotspecular) * spotlightColor;
+	}	
 
 	// add all lighting stuff
-	vec3 finalColor = (ambient + Pointdiffuse + Pointspecular) * outColor;
+	vec3 finalColor = (ambient + PointComponents + SpotComponents) * outColor;
 	//vec3 finalColor = (ambient) * textureColor;
 	fragColor = vec4(finalColor, 1.0f) * sampledColor;
 }

@@ -7,6 +7,10 @@
 #include <iostream>
 #include <string>
 
+#define _USE_MATH_DEFINES
+#include <math.h>
+
+
 // Include stb_image for loading images
 // Remember to define STB_IMAGE_IMPLEMENTATION first before including
 // to avoid linker errors
@@ -73,7 +77,9 @@ void processInput(GLFWwindow *window);
 glm::vec3 cameraPosition = { 0.0f, 0.0f, 0.0f };//for wasd
 
 glm::vec3 PointlightPos = { 0.0f, 1.0f, 0.0f };
-glm::vec3 SpotlightPos = { 3.0f, 3.0f, -1.0f };
+glm::vec3 SpotlightPos = { 0.0f, 1.0f, 0.0f };
+glm::vec3 SpotlightDir = { 0.0f, -1.0f, 0.0f };
+float SpotlightAngle = glm::radians(glm::cos(1));
 
 float ambientComponent = 0.1f;
 float diffuseComponent = 1.0f;
@@ -81,7 +87,7 @@ float specularComponent = 1.0f;
 glm::vec3 specularIntensity = { 1.0f, 1.0f, 1.0f };
 float shine = 32.0f;
 
-glm::vec3 target = { 0.0f, 0.0f, -1.0f }; // Target is a specific point that the camera is looking at
+glm::vec3 target = { 0.0f, 0.0f, -2.0f }; // Target is a specific point that the camera is looking at
 glm::vec3 up = { 0.0f, 0.1f, 0.0f }; // Global up vector (which will be used by the lookAt function to calculate the camera's right and up vectors)
 
 // timing
@@ -893,6 +899,10 @@ int main()
 		glUniform3fv(PointlightPosUniform, 1, glm::value_ptr(PointlightPos));
 		GLint SpotlightPosUniform = glGetUniformLocation(program, "SpotlightPos");
 		glUniform3fv(SpotlightPosUniform, 1, glm::value_ptr(SpotlightPos));
+		GLint SpotlightDirUniform = glGetUniformLocation(program, "SpotlightDir");
+		glUniform3fv(SpotlightDirUniform, 1, glm::value_ptr(SpotlightDir));
+		GLint SpotlightAngleUniform = glGetUniformLocation(program, "SpotlightAngle");
+		glUniform1f(SpotlightAngleUniform, SpotlightAngle);
 
 		// Construct our view frustrum (projection matrix) using the following parameters
 		float fieldOfViewY = glm::radians(45.0f); // Field of view
